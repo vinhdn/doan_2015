@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/btn_signup_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_signup_fb_selector"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/facebook_icon"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/signup_facebook"
+            android:textAlignment="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/white" />
+        </LinearLayout>
+    <bk.vinhdo.taxiads.utils.view.CustomTextView
+        android:id="@+id/btn_signup_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:text="@string/signup_email"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/gray_background" />
+</LinearLayout>

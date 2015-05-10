@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MaterialNavigationDrawerModule/MaterialNavigationDrawerModule.iml" filepath="$PROJECT_DIR$/MaterialNavigationDrawerModule/MaterialNavigationDrawerModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getaddress/getaddress.iml" filepath="$PROJECT_DIR$/getaddress/getaddress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quanhdayDoan.iml" filepath="$PROJECT_DIR$/quanhdayDoan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/run/run.iml" filepath="$PROJECT_DIR$/run/run.iml" />
+    </modules>
+  </component>
+</project>

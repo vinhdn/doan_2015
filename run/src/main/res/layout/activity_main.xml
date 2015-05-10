@@ -1,0 +1,415 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout xmlns:customname="http://schemas.android.com/apk/res/bk.vinhdo.taxiads"
+            android:id="@+id/bg_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_bk"
+            android:orientation="vertical"
+            tools:context="bk.vinhdo.taxiads.activitis.MainActivity">
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:text="CURRENT LOCATION"
+                android:textColor="@color/hong"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_very_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                customname:customFont="FoursquareIcons-Regular.otf"
+                android:typeface="serif" />
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:text="Hoang Mai"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:layout_gravity="center_horizontal"
+                customname:customFont="FoursquareIcons-Regular.otf"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                        android:id="@+id/main_addr_nearby"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/pin_nearby" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/near_by"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                        android:id="@+id/main_addr_shop"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/pin_shop" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shop"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                        android:id="@+id/main_addr_restaurant"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/pin_restaurant" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/restaurant"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                        android:id="@+id/main_addr_cafe"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/pin_cafe" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cafe"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                        android:id="@+id/main_addr_repair"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/pin_repair" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repair"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                        android:id="@+id/main_addr_heath"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/pin_heath" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/health"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#90ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:id="@+id/weather_main"
+                android:background="@drawable/bg_tranf_hong_click">
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/weather_do"
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:text="15°C"
+                    android:textSize="@dimen/text_size_very_large"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/weather_img_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_cloudy_ic"
+                        android:layout_gravity="center_horizontal" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:id="@+id/weather_thu_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="THỨ 4"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/weather_img_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_cloudy_ic"
+                        android:layout_gravity="center_horizontal" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:id="@+id/weather_thu_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="THỨ 4"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/weather_img_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_cloudy_ic"
+                        android:layout_gravity="center_horizontal" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:id="@+id/weather_thu_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="THỨ 4"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/weather_img_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_cloudy_ic"
+                        android:layout_gravity="center_horizontal" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:id="@+id/weather_thu_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="THỨ 4"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_cloudy_ic"
+                        android:layout_gravity="center_horizontal" />
+
+                    <bk.vinhdo.taxiads.utils.view.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="THỨ 4"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#90ffffff" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                >
+            <LinearLayout
+                android:id="@+id/main_activity"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_tranf_hong_click"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/activity_menu"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_large"
+                    android:layout_marginLeft="20dp"
+                    />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#90ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/main_invite_friend"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_tranf_hong_click"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/invite_friends"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_large"
+                        android:layout_marginLeft="20dp"
+                        />
+                </LinearLayout>
+                </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#90ffffff" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/navigate_bar"
+        layout="@layout/navigate_bar" />
+</RelativeLayout>

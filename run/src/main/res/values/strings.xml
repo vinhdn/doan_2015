@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TaxiAdsBK</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_address">AddressActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_checkin">CheckinActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Home Screen-->
+    <string name="near_by">Near by</string>
+    <string name="shop">Shop</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="cafe">Cafe</string>
+    <string name="repair">Repair</string>
+    <string name="health">Health</string>
+
+    <!-- Menu -->
+    <string name="home_menu">Home</string>
+    <string name="activity_menu">Activity</string>
+    <string name="notifi_menu">Notification</string>
+    <string name="setting_menu">Setting</string>
+
+    <!-- Register -->
+    <string name="create_account">Create an account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signup">SIGN UP</string>
+    <string name="have_account">AlREADY HAVE AN ACCOUNT</string>
+    <string name="signin_google">Sign in with Google</string>
+    <string name="policy">Are you agree Sign up with above info?</string>
+    <string name="signup_facebook">SIGN UP WITH FACEBOOK</string>
+    <string name="signup_email">SIGN UP WITH EMAIL</string>
+
+    <string name="invite_friends">Invite friends</string>
+    <string name="title_activity_activity_address">ActivityAddress</string>
+    <string name="title_activity_activity_test">ActivityTest</string>
+    <string name="message_network_is_unavailable">Mất kết nối mạng</string>
+    <string name="generic_error">Error!</string>
+</resources>

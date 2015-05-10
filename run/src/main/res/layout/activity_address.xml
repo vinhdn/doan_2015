@@ -1,0 +1,201 @@
+<bk.vinhdo.taxiads.utils.view.ScrollViewX xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground"
+    android:id="@+id/scroll"
+    android:fillViewport="true"
+    tools:context="bk.vinhdo.taxiads.activitis.AddressActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_header" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                            android:layout_width="35dip"
+                            android:layout_height="35dip"
+                            android:background="@drawable/actionbar_rate"
+                            android:layout_gravity="center_horizontal" />
+
+                        <bk.vinhdo.taxiads.utils.view.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rate"
+                            android:textColor="@color/gray_text"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#10000000" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                            android:layout_width="35dip"
+                            android:layout_height="35dip"
+                            android:background="@drawable/actionbar_save"
+                            android:layout_gravity="center_horizontal" />
+
+                        <bk.vinhdo.taxiads.utils.view.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save"
+                            android:textColor="@color/gray_text"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#10000000" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+                            android:id="@+id/btn_more"
+                            android:layout_width="35dip"
+                            android:layout_height="35dip"
+                            android:background="@drawable/actionbar_share"
+                            android:layout_gravity="center_horizontal" />
+
+                        <bk.vinhdo.taxiads.utils.view.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Share"
+                            android:textColor="@color/gray_text"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#10000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dip">
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:src="@drawable/no_avatar" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dip">
+
+                        <TextView
+                            android:layout_marginTop="3dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500 people saved this" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#10000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dip">
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:src="@drawable/feed_hide_groups" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dip">
+
+                        <TextView
+                            android:layout_marginTop="3dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="80 people have been here" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#10000000" />
+
+            </LinearLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                layout="@layout/layout_info_add" />
+
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_topic_of_addr"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="7dp"
+                android:listSelector="@android:color/transparent"
+                android:drawSelectorOnTop="false"></ListView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</bk.vinhdo.taxiads.utils.view.ScrollViewX>

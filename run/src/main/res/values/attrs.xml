@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="customFont" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SlidingLayer">
+        <attr name="shadowDrawableSliding" format="boolean" />
+        <attr name="shadowWidthSliding" format="dimension" />
+        <attr name="closeOnTapEnabled" format="boolean" />
+        <attr name="openOnTapEnabled" format="boolean" />
+        <attr name="offsetWidth" format="dimension" />
+        <attr name="stickTo" format="enum">
+            <enum name="auto" value="0" />
+            <enum name="right" value="-1" />
+            <enum name="left" value="-2" />
+            <enum name="middle" value="-3" />
+            <enum name="top" value="-4" />
+            <enum name="bottom" value="-5" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+</resources>

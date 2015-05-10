@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GetAddress_1.0_1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/getaddress/libs/GetAddress_1.0_1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

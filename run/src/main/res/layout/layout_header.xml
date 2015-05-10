@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_info"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="#2980b9"
+        android:id="@+id/image_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:background="#8e44ad"
+                android:id="@+id/image_avatar" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_marginLeft="10dp">
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roxwin company"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/address_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/hong" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_rating_frame"
+        android:layout_marginTop="181dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" >
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="28dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/star_full" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="28dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/star_empty" />
+    </LinearLayout>
+</FrameLayout>

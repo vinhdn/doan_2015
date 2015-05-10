@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/bk.vinhdo.taxiads"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_gravity="start"
+    android:background="@color/bg_menu"
+    tools:ignore="MissingPrefix">
+
+    <bk.vinhdo.taxiads.utils.view.CircleImageView
+        android:id="@+id/menu_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/eyewitness_icon"
+        android:layout_centerInParent="true" />
+
+    <bk.vinhdo.taxiads.utils.view.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/menu_avatar"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_size_large"
+        android:text="Vinh do"
+        custom:customFont="Roboto-Light.ttf"
+        android:textColor="#fff5ffef" />
+
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigate_bar_ll"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/ab_background_light"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <!-- left view -->
+    <RelativeLayout
+        android:id="@+id/left_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:layout_marginLeft="5dp">
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/left_image"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="@drawable/text_selector_white"
+            android:textSize="@dimen/text_size_normal" />
+
+        <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+            android:id="@+id/left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <!-- title view -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" >
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/title_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="2dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:ellipsize="marquee" />
+
+        <LinearLayout
+            android:id="@+id/undo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:id="@+id/undo_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="undo"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:id="@+id/redo_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="redo"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- right view -->
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:layout_marginRight="5dp">
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="@drawable/text_selector_white"
+            android:textSize="@dimen/text_size_normal" />
+        
+        <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+            android:id="@+id/extra_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/right_image"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+        <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
+            android:id="@+id/right_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+</LinearLayout>

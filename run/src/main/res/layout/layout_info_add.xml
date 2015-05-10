@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_info_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/info_mapico"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/info_map_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="166 Trieu Viet Vuong"
+                    android:textColor="@color/blue" />
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/info_map_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(Hai Ba Trung)"
+                    android:textColor="@color/gray_text" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_info_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/info_phoneico"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/info_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0944022792"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_info_drive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/info_driveico"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/info_drive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About 2km"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_info_more_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/info_moreico"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More detail"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_layout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/gray_background">
+
+        <ProgressBar
+            android:id="@+id/loading_view"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false" />
+
+        <FrameLayout
+            android:id="@+id/map_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+</LinearLayout>

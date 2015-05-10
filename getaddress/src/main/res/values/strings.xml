@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GetAddress</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="generic_error">Error</string>
+    <string name="message_network_is_unavailable">Không có kết nối mạng</string>
+</resources>

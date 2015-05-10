@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_background">#ffbfc0c6</color>
+    <color name="gray_text">#797e85</color>
+    <color name="title_address_info">#3498db</color>
+    <color name="header_background">#419e89</color>
+    <color name="white">#ffffff</color>
+    <color name="hong">#ec327d</color>
+    <color name="bg_menu">#34495e</color>
+    <color name="bg_register">#040405</color>
+    <color name="bg_edit_register">#3f4045</color>
+    <color name="blue">#006cff</color>
+</resources>

@@ -456,7 +456,6 @@ public class MapsActivity extends BaseActivity implements
         }
         Marker marker = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(add.getLat(), add.getLng()))
-                        //.title(add.getTitle())
                 .snippet(add.toJSON())
                 .icon(BitmapDescriptorFactory.fromResource(imageRe)));
         add.setIdMarker(marker.getId());
@@ -497,6 +496,7 @@ public class MapsActivity extends BaseActivity implements
                         builderBounds = new LatLngBounds.Builder();
                         for (int i = 0; i < listAddress.size(); i++) {
                             AddressModel add = listAddress.get(i);
+                            add.setIdInList(i);
 //            add.setJson(add.getJson().put("listID", i));
                             addAddToMap(add, i, false);
                         }
@@ -737,13 +737,9 @@ public class MapsActivity extends BaseActivity implements
 
     @Override
     public void onClick(Marker marker) {
-        Log.d("Marker ID", marker.getId());
-        try {
-            JSONObject jo = new JSONObject(marker.getSnippet());
-            int p = jo.getInt("listID");
-            lvAddress.setCurrentItem(p);
-        } catch (JSONException joe) {
-            joe.printStackTrace();
+        AddressModel address = JSONConvert.getAddress(marker.getSnippet());
+        if(address.getIdInList() >= 0){
+            lvAddress.setCurrentItem(address.getIdInList());
         }
         //tvTitleMarkerClick.setText(marker.getTitle());
     }

@@ -20,14 +20,20 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.loopj.android.http.TextHttpResponseHandler;
 
+import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.activitis.base.BaseActivity;
+import bk.vinhdo.taxiads.api.loopj.RestClient;
+import bk.vinhdo.taxiads.api.parse.JSONConvert;
 import bk.vinhdo.taxiads.fragments.AddressListViewFragment;
 import bk.vinhdo.taxiads.models.Address;
+import bk.vinhdo.taxiads.models.AddressModel;
+import bk.vinhdo.taxiads.models.ResponseModel;
 import bk.vinhdo.taxiads.utils.Keys;
 import bk.vinhdo.taxiads.volley.VolleySingleton;
 
@@ -35,7 +41,7 @@ public class ActivityAddress extends BaseActivity {
 
     private static String LINK_DATA = "https://api.foursquare.com/v2/venues/";
 
-    private Address mAddress;
+    private AddressModel mAddress;
     private ListView mDataLv;
     private RelativeLayout mRequestProgress;
     private FrameLayout mContainer;
@@ -43,7 +49,7 @@ public class ActivityAddress extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAddress = new Address();
+        mAddress = new AddressModel();
         mAddress.setId(getIntent().getExtras().getString("id_address"));
         setContentView(R.layout.address_activity, false);
     }
@@ -55,49 +61,32 @@ public class ActivityAddress extends BaseActivity {
         setBackgroundLeftImage(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         setBackgroundTitleText("Address",android.R.color.transparent);
 
-        final Drawable cd = getResources().getDrawable(R.drawable.ab_background_light);
-        layout_actionbar.setBackgroundDrawable(cd);
-        cd.setAlpha(100);
+//        final Drawable cd = getResources().getDrawable(R.drawable.ab_background_light);
+//        layout_actionbar.setBackgroundDrawable(cd);
+//        cd.setAlpha(100);
 
         mRequestProgress = (RelativeLayout) findViewById(R.id.request_progress);
         getData(LINK_DATA + mAddress.getId() + "/?" + Keys.KEY);
     }
 
     private void getData(String url) {
-        new VolleySingleton().getInstance().getRequestQueue().add(
-                new JsonObjectRequest(Request.Method.GET, url.equals("") ? LINK_DATA : url, null, new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject jsonObject) {
-                        try {
-                            processData(jsonObject);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
+        RestClient.getInfoAddress(getCurrentUser() == null ? null : getCurrentUser().getAccessToken(), mAddress.getId(), new TextHttpResponseHandler() {
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
 
-                    }
-                }));
-    }
+            }
 
-    private void processData(JSONObject jo) throws JSONException{
-        if(jo.getJSONObject("meta").getInt("code") != 200)
-            return;
-        JSONObject joVenue = jo.getJSONObject("response").getJSONObject("venue");
-        mAddress = new Address(joVenue);
-//        tvName.setText(address.getTitle());
-//        if(mAddress.getRate() > 0)
-//            RateUtil.SetRatingView(address.getRate() / 2, findViewById(R.id.item_rating_frame), 28);
-//        if(mAddress.getLocation() !=null) {
-//            tvAdrress1.setText(mAddress.getLocation().getAddress());
-//            tvAddress2.setText(mAddress.getLocation().getCrossStreet());
-//            loadMap(mAddress.getLocation().getLat(), mAddress.getLocation().getLng());
-//        }
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, new AddressListViewFragment(mAddress)).commit();
-        mRequestProgress.setVisibility(View.GONE);
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                ResponseModel response = JSONConvert.getResponse(responseString);
+                if(response.isSuccess()){
+                    mAddress = JSONConvert.getAddress(response.getData());
+                    getSupportFragmentManager().beginTransaction()
+                            .add(R.id.container, new AddressListViewFragment(mAddress)).commit();
+                    mRequestProgress.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     @Override

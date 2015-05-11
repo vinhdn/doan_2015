@@ -111,7 +111,15 @@ public class AddressModel extends BaseModel{
     @SerializedName("likes")
     private List<UserModel> listLikes;
 
+    @SerializedName("best_photo")
+    @DatabaseField
+    private String bestPhoto;
+
+    @SerializedName("id_marker")
     private String idMarker;
+
+    @SerializedName("id_in_list")
+    private int idInList = -1;
 
     public long getDateUpdate() {
         return dateUpdate;
@@ -341,5 +349,21 @@ public class AddressModel extends BaseModel{
 
     public void setIdMarker(String idMarker) {
         this.idMarker = idMarker;
+    }
+
+    public int getIdInList() {
+        return idInList;
+    }
+
+    public void setIdInList(int idInList) {
+        this.idInList = idInList;
+    }
+
+    public String getBestPhoto() {
+        return bestPhoto;
+    }
+
+    public void setBestPhoto(String bestPhoto) {
+        this.bestPhoto = bestPhoto;
     }
 }

@@ -10,15 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image_tip"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         android:src="@drawable/create_place_location"
-        android:visibility="gone"
+        android:visibility="visible"
         />
     <bk.vinhdo.taxiads.utils.view.CustomTextView
         android:id="@+id/content_tip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="For VND18k you get superb cà phê sữa. It's heaving here. Skip the Starbucks and experience the real thing."
         android:textAppearance="?android:attr/textAppearanceMedium"
         />
     <LinearLayout
@@ -39,7 +38,6 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Robin Allenson"
             android:layout_marginRight="10dp"
             />
         <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -47,7 +45,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="09/09/2014"
             />
         <LinearLayout
             android:layout_width="wrap_content"

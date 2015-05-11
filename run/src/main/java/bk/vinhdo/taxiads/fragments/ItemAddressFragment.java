@@ -50,8 +50,13 @@ public class ItemAddressFragment extends Fragment {
         if(address == null)
             return  view;
         TextView title = (TextView)view.findViewById(R.id.info_maps_title);
+        TextView tvRate = (TextView)view.findViewById(R.id.info_maps_rate);
+        TextView tvContent = (TextView)view.findViewById(R.id.info_maps_content);
         title.setText(address.getName());
-        Log.d("Title",address.getName() + "  " + address.getIdMarker());
+        if(address.getRate() > 0){
+            tvRate.setText(String.valueOf(address.getRate()));
+        }
+        tvContent.setText(address.getCategory().getName());
         return view;
     }
 }

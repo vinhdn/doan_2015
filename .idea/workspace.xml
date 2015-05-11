@@ -4,74 +4,36 @@
     <shared>
       <config />
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4708777d-9672-49b5-9270-ff6c592986a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/AddressApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/AddressFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/config/ApiConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/androidTest/java/me/vinhdo/getaddress/ApplicationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/CategoryFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/ContactFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/utils/sdcard/FileManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/loopj/HandleAuthTokenExpired.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/loopj/HandleErrorMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/HoursFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/loopj/IStrategyHandleError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/parse/JSONConvert.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/parse/JSONUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/config/Key.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/LikesFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/LocationFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/utils/Log.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/loopj/LoopjRestClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/MapsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/utils/NetworkUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/PhotoFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/ResponseFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/ResponseModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/api/loopj/RestClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/utils/text/StringUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/TimeOpenFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/TipFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/utils/ToastUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/java/me/vinhdo/getaddress/Models/UserFSModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/layout/activity_maps.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/getaddress.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/debug/res/values/google_maps_api.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/release/res/values/google_maps_api.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getaddress/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/BaseFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/Address.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/AddressActivity.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/AddressActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/AddressListViewFragment.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/AddressListViewFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/ApiConfig.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/ApiConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/BaseModel.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/BaseModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/CheckinActivity.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/CheckinActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/InfoMapsAdapter.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/InfoMapsAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/ItemAddressListViewAdapter.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/ItemAddressListViewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/parse/JSONConvert.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/parse/JSONConvert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/LoopjRestClient.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/LoopjRestClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MainActivity.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/MainFragment.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/MainFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/PostModel.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/PostModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/RestClient.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/RestClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/TimeOpenModel.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/TimeOpenModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/UserModel.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/UserModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/res/layout/layout_checkin.xml" afterPath="$PROJECT_DIR$/run/src/main/res/layout/layout_checkin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/run.iml" afterPath="$PROJECT_DIR$/run/run.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/TopicAdapter.java" afterPath="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/TopicAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/res/layout/item_info_maps.xml" afterPath="$PROJECT_DIR$/run/src/main/res/layout/item_info_maps.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/res/layout/item_post_of_address.xml" afterPath="$PROJECT_DIR$/run/src/main/res/layout/item_post_of_address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml" afterPath="$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quanh Đây.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,53 +126,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MapsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java">
+      <file leaf-file-name="ActivityAddress.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-127.111115">
-              <caret line="584" column="31" selection-start-line="584" selection-start-column="31" selection-end-line="584" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/TopicAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.21875">
+              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
               <folding>
-                <element signature="method#getData#0;class#MapsActivity#0" expanded="false" />
+                <element signature="e#2231#2597#0" expanded="true" />
+                <element signature="e#2596#2597#0" expanded="true" />
+                <element signature="e#3525#3891#0" expanded="true" />
+                <element signature="e#3890#3891#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemAddressListViewAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/ItemAddressListViewAdapter.java">
+      <file leaf-file-name="layout_info_add.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/layout_info_add.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddressModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+              <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemAddressFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java">
+      <file leaf-file-name="layout_header.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="57" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
+            <state vertical-scroll-proportion="-8.275862">
+              <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityAddress.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20765027">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Address.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/Address.java">
+      <file leaf-file-name="item_post_of_address.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/item_post_of_address.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.8275862">
+              <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaxiApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/TaxiApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -220,71 +214,30 @@
         <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/parse/JSONConvert.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-              <folding>
-                <element signature="e#761#826#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/RestClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java">
+      <file leaf-file-name="BaseActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="267" column="29" selection-start-line="267" selection-start-column="29" selection-end-line="267" selection-end-column="29" />
-              <folding>
-                <element signature="e#5110#5111#0" expanded="true" />
-                <element signature="e#5137#5138#0" expanded="true" />
-                <element signature="e#5412#5413#0" expanded="true" />
-                <element signature="e#5444#5445#0" expanded="true" />
-                <element signature="e#5494#5495#0" expanded="true" />
-                <element signature="e#5536#5537#0" expanded="true" />
-                <element signature="e#5570#5571#0" expanded="true" />
-                <element signature="e#5603#5604#0" expanded="true" />
-                <element signature="e#5652#5653#0" expanded="true" />
-                <element signature="e#5696#5697#0" expanded="true" />
-                <element signature="e#5727#5728#0" expanded="true" />
-                <element signature="e#5756#5757#0" expanded="true" />
-                <element signature="e#5801#5802#0" expanded="true" />
-                <element signature="e#5837#5838#0" expanded="true" />
-                <element signature="e#5869#5870#0" expanded="true" />
-                <element signature="e#5899#5900#0" expanded="true" />
-                <element signature="e#5946#5947#0" expanded="true" />
-                <element signature="e#5984#5985#0" expanded="true" />
-                <element signature="e#6029#6030#0" expanded="true" />
-                <element signature="e#6061#6062#0" expanded="true" />
-                <element signature="e#6120#6121#0" expanded="true" />
-                <element signature="e#6162#6163#0" expanded="true" />
-                <element signature="e#6489#6490#0" expanded="true" />
-                <element signature="e#6516#6517#0" expanded="true" />
-                <element signature="e#6556#6557#0" expanded="true" />
-                <element signature="e#6588#6589#0" expanded="true" />
-                <element signature="e#6623#6624#0" expanded="true" />
-                <element signature="e#6654#6655#0" expanded="true" />
-                <element signature="e#6702#6703#0" expanded="true" />
-                <element signature="e#6742#6743#0" expanded="true" />
-              </folding>
+              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/BaseModel.java">
+      <file leaf-file-name="MapsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
-              <folding />
+              <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
+              <folding>
+                <element signature="method#getData#0;class#MapsActivity#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3602,15 +3555,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/Key.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/parse/JSONConvert.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/RestClient.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MainActivity.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/MainFragment.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/AddressActivity.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java" />
-        <option value="$PROJECT_DIR$/run/src/main/res/layout/layout_checkin.xml" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/TimeOpenModel.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/CheckinActivity.java" />
         <option value="$PROJECT_DIR$/getaddress/build.gradle" />
@@ -3646,13 +3590,22 @@
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/Address.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/UserModel.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/PostModel.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/ApiConfig.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/LoopjRestClient.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/ItemAddressListViewAdapter.java" />
-        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/BaseModel.java" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/ApiConfig.java" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/InfoMapsAdapter.java" />
+        <option value="$PROJECT_DIR$/run/src/main/res/layout/item_info_maps.xml" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/AddressListViewFragment.java" />
+        <option value="$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml" />
         <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java" />
+        <option value="$PROJECT_DIR$/run/src/main/res/layout/item_post_of_address.xml" />
+        <option value="$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/TopicAdapter.java" />
       </list>
     </option>
   </component>
@@ -3697,6 +3650,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3725,7 +3681,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="getaddress" />
+              <option name="myItemId" value="run" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3739,7 +3695,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="getaddress" />
+              <option name="myItemId" value="run" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -3757,7 +3713,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="getaddress" />
+              <option name="myItemId" value="run" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -3766,6 +3722,138 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quanh Đây" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quanhdayDoan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taxiads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quanh Đây" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quanhdayDoan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taxiads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quanh Đây" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quanhdayDoan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taxiads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quanh Đây" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quanhdayDoan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taxiads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4189,9 +4277,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4209,7 +4294,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.0.102:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="MB250W106895" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
@@ -4409,7 +4494,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -4491,8 +4576,8 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329849" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39953542" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52380955" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
@@ -4501,7 +4586,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29849014" sideWeight="0.497558" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29849014" sideWeight="0.497558" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4514,8 +4599,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329849" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -4546,6 +4631,110 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="71" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/AddressListViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/TopicAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
+          <folding>
+            <element signature="e#2231#2597#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#3525#3891#0" expanded="true" />
+            <element signature="e#3890#3891#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/layout_info_add.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/item_post_of_address.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="315" column="54" selection-start-line="315" selection-start-column="54" selection-end-line="315" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/3599ba755b1e9162955c5a031a7d5447cf8c93f/android-async-http-1.4.6-sources.jar!/com/loopj/android/http/TextHttpResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7478992">
@@ -4619,7 +4808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76076555">
           <caret line="52" column="45" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4627,7 +4815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19138756">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4639,28 +4826,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="239" column="5" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
-          <folding>
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1888#1889#0" expanded="false" />
-            <element signature="e#1924#1925#0" expanded="false" />
-            <element signature="e#1952#1953#0" expanded="false" />
-            <element signature="e#4336#4337#0" expanded="false" />
-            <element signature="e#4368#4369#0" expanded="false" />
-            <element signature="e#4416#4417#0" expanded="false" />
-            <element signature="e#4458#4459#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/ImageModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4677,16 +4846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/ApiConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/LoopjRestClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4695,14 +4854,6 @@
             <element signature="e#7714#7796#0" expanded="false" />
             <element signature="e#7867#7949#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/RestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4734,7 +4885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57923496">
           <caret line="352" column="18" selection-start-line="352" selection-start-column="18" selection-end-line="352" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4746,78 +4896,183 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java">
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/config/ApiConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-127.111115">
-          <caret line="584" column="31" selection-start-line="584" selection-start-column="31" selection-end-line="584" selection-end-column="31" />
-          <folding>
-            <element signature="method#getData#0;class#MapsActivity#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/parse/JSONConvert.java">
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/item_info_maps.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9310346">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/InfoMapsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-          <folding>
-            <element signature="e#761#826#0" expanded="true" />
-          </folding>
+          <caret line="44" column="78" selection-start-line="42" selection-start-column="8" selection-end-line="44" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java">
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/loopj/RestClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="267" column="29" selection-start-line="267" selection-start-column="29" selection-end-line="267" selection-end-column="29" />
-          <folding>
-            <element signature="e#5110#5111#0" expanded="true" />
-            <element signature="e#5137#5138#0" expanded="true" />
-            <element signature="e#5412#5413#0" expanded="true" />
-            <element signature="e#5444#5445#0" expanded="true" />
-            <element signature="e#5494#5495#0" expanded="true" />
-            <element signature="e#5536#5537#0" expanded="true" />
-            <element signature="e#5570#5571#0" expanded="true" />
-            <element signature="e#5603#5604#0" expanded="true" />
-            <element signature="e#5652#5653#0" expanded="true" />
-            <element signature="e#5696#5697#0" expanded="true" />
-            <element signature="e#5727#5728#0" expanded="true" />
-            <element signature="e#5756#5757#0" expanded="true" />
-            <element signature="e#5801#5802#0" expanded="true" />
-            <element signature="e#5837#5838#0" expanded="true" />
-            <element signature="e#5869#5870#0" expanded="true" />
-            <element signature="e#5899#5900#0" expanded="true" />
-            <element signature="e#5946#5947#0" expanded="true" />
-            <element signature="e#5984#5985#0" expanded="true" />
-            <element signature="e#6029#6030#0" expanded="true" />
-            <element signature="e#6061#6062#0" expanded="true" />
-            <element signature="e#6120#6121#0" expanded="true" />
-            <element signature="e#6162#6163#0" expanded="true" />
-            <element signature="e#6489#6490#0" expanded="true" />
-            <element signature="e#6516#6517#0" expanded="true" />
-            <element signature="e#6556#6557#0" expanded="true" />
-            <element signature="e#6588#6589#0" expanded="true" />
-            <element signature="e#6623#6624#0" expanded="true" />
-            <element signature="e#6654#6655#0" expanded="true" />
-            <element signature="e#6702#6703#0" expanded="true" />
-            <element signature="e#6742#6743#0" expanded="true" />
-          </folding>
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/ItemAddressFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="57" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/AddressListViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/fragments/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6614583">
+          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/layout_header.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.275862">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/layout_info_add.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/drawable-xhdpi/ab_background_light.9.png">
+      <provider editor-type-id="images">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="ninepatcheditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/base/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
+          <folding>
+            <element signature="method#getData#0;class#MapsActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/activitis/ActivityAddress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20765027">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/api/parse/JSONConvert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/models/AddressModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/res/layout/item_post_of_address.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8275862">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/TaxiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/src/main/java/bk/vinhdo/taxiads/adapters/TopicAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21875">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+          <folding>
+            <element signature="e#2231#2597#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#3525#3891#0" expanded="true" />
+            <element signature="e#3890#3891#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

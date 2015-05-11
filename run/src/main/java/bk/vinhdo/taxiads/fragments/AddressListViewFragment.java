@@ -31,16 +31,23 @@ import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.activitis.ActivityAddress;
 import bk.vinhdo.taxiads.adapters.TopicAdapter;
 import bk.vinhdo.taxiads.models.Address;
+import bk.vinhdo.taxiads.models.AddressModel;
 
 /**
  * Created by Vinh on 3/10/15.
  */
-public class AddressListViewFragment extends Fragment {
+public class AddressListViewFragment extends BaseFragment {
 
     private ListView mListView;
-    private Address mAddress;
-    public AddressListViewFragment(Address address){
+    private AddressModel mAddress;
+
+    public AddressListViewFragment(AddressModel address){
         this.mAddress = address;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override

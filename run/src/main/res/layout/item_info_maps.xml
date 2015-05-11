@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:background="@drawable/abc_popup_background_mtrl_mult"
+    android:background="@android:color/transparent"
     android:padding="5dp"
     android:layout_margin="5dp"
     android:layout_height="wrap_content">
@@ -17,7 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ff157cfc"
-        android:text="8.2"
         android:id="@+id/info_maps_rate"
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
@@ -28,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_weight=".1"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="15dp"
         android:orientation="vertical">
 
         <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -36,7 +35,6 @@
             android:layout_height="wrap_content"
             android:textColor="#ff157cfc"
             android:id="@+id/info_maps_title"
-            android:text="Hanoi univer city"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold"
             />
@@ -45,7 +43,6 @@
             android:layout_height="wrap_content"
             android:textColor="#ffbfc0c6"
             android:id="@+id/info_maps_content"
-            android:text="Infor"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="italic"
             />

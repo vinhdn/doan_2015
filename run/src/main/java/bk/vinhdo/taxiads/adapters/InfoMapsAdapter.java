@@ -12,6 +12,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bk.vinhdo.taxiads.R;
+import bk.vinhdo.taxiads.api.parse.JSONConvert;
+import bk.vinhdo.taxiads.models.AddressModel;
 
 /**
  * Created by Vinh on 1/21/15.
@@ -42,16 +44,13 @@ public class InfoMapsAdapter implements GoogleMap.InfoWindowAdapter {
         TextView tvTitle = (TextView)v.findViewById(R.id.info_maps_title);
         TextView tvContent = (TextView)v.findViewById(R.id.info_maps_content);
         tvTitle.setText(marker.getTitle());
-        try {
-            JSONObject jo = new JSONObject(marker.getSnippet());
-            if(!jo.isNull("rate"))
-                tvRate.setText(jo.getString("rate"));
-            if(!jo.isNull("cate"))
-                tvRate.setText(jo.getString("cate"));
-        } catch (JSONException e) {
-            e.printStackTrace();
+        Log.d("Marker ID", marker.getId());
+        AddressModel address = JSONConvert.getAddress(marker.getSnippet());
+        if(address.getRate() > 0){
+            tvRate.setText(String.valueOf(address.getRate()));
         }
-        Log.d("Marker ID",marker.getId());
+        tvTitle.setText(address.getName());
+        tvContent.setText(address.getCategory().getName());
         infoClickListener.onClick(marker);
         return v;
     }

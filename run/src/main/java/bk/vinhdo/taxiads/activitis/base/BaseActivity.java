@@ -312,6 +312,9 @@ public abstract class BaseActivity extends FragmentActivity {
     }
 
     public UserModel getCurrentUser(){
+        if(mCurrentUser == null){
+            mCurrentUser = UserModel.getCurrentUser();
+        }
         return mCurrentUser;
     }
 }

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GetVenues</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="message_network_is_unavailable">Network is unavaialbe</string>
+</resources>

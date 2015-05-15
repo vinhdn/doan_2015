@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Created by vinhdo on 4/30/15.
  */
 public class ApiConfig {
-    private static final String URL_BASE = "http://192.168.0.102/doan/";
+    private static final String URL_BASE = "http://128.199.69.38/doan/";
 //    private static final String URL_BASE = "http://192.168.100.16/doan/";
     public static final String URL_CREATE_ADDRESS = URL_BASE + "address/create";
     public static final String URL_GET_INFO_ADDRESS = URL_BASE + "address/getinfo";

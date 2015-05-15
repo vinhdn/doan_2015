@@ -33,12 +33,40 @@ public class MapsActivity extends FragmentActivity {
     private List<AddressFSModel> mListAddressLoaded = new ArrayList();
     private GoogleMap mMap;
     private int mNumberAddressLoaded = 0;
+    private String mKeySearch;
+    private String mKeyCate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            int id = bundle.getInt(Key.KEY_CATE);
+            switch (id){
+                case 1:
+                    mKeySearch = Key.KEY_CAFE_ID;
+                    mKeyCate = Key.KEY_CA;
+                    break;
+                case 2:
+                    mKeySearch = Key.KEY_RESTAURANT_ID;
+                    mKeyCate = Key.KEY_RES;
+                    break;
+                case 3:
+                    mKeySearch = Key.KEY_SH;
+                    mKeyCate = Key.KEY_SH;
+                    break;
+                case 4:
+                    mKeySearch = Key.KEY_HOTEL;
+                    mKeyCate = Key.KEY_HOTEL;
+                    break;
+                default:
+                    mKeySearch = Key.KEY_HOTEL;
+                    mKeyCate = Key.KEY_HOTEL;
+                    break;
+            }
+        }
     }
 
     @Override
@@ -88,7 +116,7 @@ public class MapsActivity extends FragmentActivity {
         this.mMap.getUiSettings().setMapToolbarEnabled(true);
         this.mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             public void onMapLongClick(LatLng paramAnonymousLatLng) {
-                RestClient.searchAddressFS(paramAnonymousLatLng.latitude, paramAnonymousLatLng.longitude, Key.KEY_SH, 50, new TextHttpResponseHandler() {
+                RestClient.searchAddressFS(paramAnonymousLatLng.latitude, paramAnonymousLatLng.longitude, mKeySearch, 50, new TextHttpResponseHandler() {
                     public void onFailure(int paramAnonymous2Int, Header[] paramAnonymous2ArrayOfHeader, String paramAnonymous2String, Throwable paramAnonymous2Throwable) {
                     }
 
@@ -126,7 +154,7 @@ public class MapsActivity extends FragmentActivity {
                 if (localResponseFSModel.isSuccess()) {
                     try {
                         mAddress = JSONConvert.getAddress(localResponseFSModel.getResponse());
-                        RestClient.createAddressFS(mAddress, Key.KEY_SH, new TextHttpResponseHandler() {
+                        RestClient.createAddressFS(mAddress, mKeyCate, new TextHttpResponseHandler() {
                             public void onFailure(int paramAnonymous2Int, Header[] paramAnonymous2ArrayOfHeader, String paramAnonymous2String, Throwable paramAnonymous2Throwable) {
                                 nextAddress();
                             }

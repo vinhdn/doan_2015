@@ -26,4 +26,7 @@ public class Key {
     public static final String KEY_RESTAURANT_ID = "4bf58dd8d48988d1c4941735,4bf58dd8d48988d14a941735,4bf58dd8d48988d16e941735,4bf58dd8d48988d143941735";
     public static final String KEY_SH = "4d4b7105d754a06378d81259";
     public static final String KEY_SHOP = "shop";
+    public static final String KEY_HOTEL = "4e67e38e036454776db1fb3a";
+    public static final java.lang.String KEY_CATE = "category";
+    public static String Key_SEARH = "search";
 }

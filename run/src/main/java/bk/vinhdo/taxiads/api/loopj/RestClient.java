@@ -34,41 +34,46 @@ public class RestClient {
         RequestParams params = new RequestParams();
         params.put(ApiConfig.PARAM_EMAIL, email);
         params.put(ApiConfig.PARAM_PASSWORD, password);
-        LoopjRestClient.post(ApiConfig.URL_LOGIN, params, null, responseHandler);
+        LoopjRestClient.post(ApiConfig.URL_LOGIN, params, responseHandler);
     }
 
     public static void loginFacebook(String facebookToken, TextHttpResponseHandler responseHandler) {
         RequestParams params = new RequestParams();
         params.put(ApiConfig.PARAM_ACCESS_TOKEN, facebookToken);
-        LoopjRestClient.post(ApiConfig.URL_LOGIN_WITH_FACEBOOK, params, null, responseHandler);
+        LoopjRestClient.post(ApiConfig.URL_LOGIN_WITH_FACEBOOK, params, responseHandler);
     }
 
-    public static void getListAddress(double lat, double lng, int limit, TextHttpResponseHandler responseHandler){
+    public static void getListAddress(double lat, double lng,int distance, String categoryId, String query, int limit, TextHttpResponseHandler responseHandler) {
         RequestParams params = new RequestParams();
-        params.put(ApiConfig.PARAM_LAT,lat);
-        params.put(ApiConfig.PARAM_LNG,lng);
-        params.put(ApiConfig.PARAM_LIMIT,limit);
+        params.put(ApiConfig.PARAM_LAT, lat);
+        params.put(ApiConfig.PARAM_LNG, lng);
+        params.put(ApiConfig.PARAM_DIST, distance);
+        params.put(ApiConfig.PARAM_LIMIT, limit);
+        if (categoryId != null)
+            params.put(ApiConfig.PARAM_CATEGORY_ID, categoryId);
+        if (query != null)
+            params.put("q", query);
 
-        LoopjRestClient.post(ApiConfig.URL_GET_LIST_ADDRESS,params,responseHandler);
+        LoopjRestClient.post(ApiConfig.URL_GET_LIST_ADDRESS, params, responseHandler);
     }
 
-    public static void getInfoAddress(String accessToken, String addressId, TextHttpResponseHandler responseHandler){
+    public static void getInfoAddress(String accessToken, String addressId, TextHttpResponseHandler responseHandler) {
         RequestParams params = new RequestParams();
-        if(accessToken != null)
-            params.put(ApiConfig.PARAM_ACCESS_TOKEN,accessToken);
-        params.put(ApiConfig.PARAM_ID,addressId);
+        if (accessToken != null)
+            params.put(ApiConfig.PARAM_ACCESS_TOKEN, accessToken);
+        params.put(ApiConfig.PARAM_ID, addressId);
 
-        LoopjRestClient.post(ApiConfig.URL_GET_INFO_ADDRESS,params,responseHandler);
+        LoopjRestClient.post(ApiConfig.URL_GET_INFO_ADDRESS, params, responseHandler);
     }
 
-    public static void createPost(String accessToken, String addressId, String content, File image, TextHttpResponseHandler responseHandler){
+    public static void createPost(String accessToken, String addressId, String content, File image, TextHttpResponseHandler responseHandler) {
         RequestParams params = new RequestParams();
         params.put(ApiConfig.PARAM_ACCESS_TOKEN, accessToken);
         params.put(ApiConfig.PARAM_ADDRESS_ID, addressId);
-        params.put(ApiConfig.PARAM_CONTENT,content);
+        params.put(ApiConfig.PARAM_CONTENT, content);
         try {
-            if(image != null && image.isFile() && image.canRead())
-            params.put(ApiConfig.PARAM_IMAGE,image);
+            if (image != null && image.isFile() && image.canRead())
+                params.put(ApiConfig.PARAM_IMAGE, image);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

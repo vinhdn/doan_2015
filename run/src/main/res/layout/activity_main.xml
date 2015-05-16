@@ -3,6 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_bk"
+        android:scaleType="fitCenter"
+        />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +20,6 @@
             android:id="@+id/bg_ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_bk"
             android:orientation="vertical"
             tools:context="bk.vinhdo.taxiads.activitis.MainActivity">
 
@@ -153,7 +159,7 @@
                     android:orientation="vertical">
 
                     <bk.vinhdo.taxiads.utils.view.SAutoBgImageButton
-                        android:id="@+id/main_addr_repair"
+                        android:id="@+id/main_addr_residence"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center_horizontal"
@@ -162,7 +168,7 @@
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/repair"
+                        android:text="@string/residence"
                         android:layout_gravity="center_horizontal"
                         android:textColor="@color/white" />
                 </LinearLayout>

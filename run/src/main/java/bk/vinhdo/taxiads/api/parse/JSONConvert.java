@@ -13,6 +13,7 @@ import java.util.List;
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.TaxiApplication;
 import bk.vinhdo.taxiads.models.AddressModel;
+import bk.vinhdo.taxiads.models.PostModel;
 import bk.vinhdo.taxiads.models.ResponseModel;
 import bk.vinhdo.taxiads.models.UserModel;
 import bk.vinhdo.taxiads.utils.text.StringUtil;
@@ -65,6 +66,11 @@ public class JSONConvert {
     public static AddressModel getAddress(String responseString){
         Gson gson = new GsonBuilder().create();
         return gson.fromJson(responseString, AddressModel.class);
+    }
+
+    public static PostModel getPost(String responseString){
+        Gson gson = new GsonBuilder().create();
+        return gson.fromJson(responseString, PostModel.class);
     }
 
     public static List<AddressModel> getAddresses(String responseString) {

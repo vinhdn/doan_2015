@@ -1,5 +1,6 @@
 package bk.vinhdo.taxiads.activitis;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -30,6 +31,8 @@ import bk.vinhdo.taxiads.activitis.base.BaseActivity;
 import bk.vinhdo.taxiads.adapters.TopicAdapter;
 import bk.vinhdo.taxiads.api.loopj.RestClient;
 import bk.vinhdo.taxiads.api.parse.JSONConvert;
+import bk.vinhdo.taxiads.config.ApiConfig;
+import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
 import bk.vinhdo.taxiads.models.ResponseModel;
@@ -134,7 +137,7 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
         setVisibleRightImage(true);
         setVisibleLeftImage(true);
         setBackgroundLeftImage(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
-        setBackgroundTitleText("Address",android.R.color.transparent);
+        setBackgroundTitleText("Address", android.R.color.transparent);
         scroll = (ScrollViewX)findViewById(R.id.scroll);
         //final ColorDrawable cd = new ColorDrawable(R.color.header_background);
         final Drawable cd = getResources().getDrawable(R.drawable.ab_background_light);
@@ -206,8 +209,16 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     public void onRightHeaderClick() {
-        Intent i = new Intent(AddressActivity.this,CheckinActivity.class);
-        startActivity(i);
+        if(getCurrentUser() == null){
+            //TODO Login
+            Intent intent = new Intent(AddressActivity.this, LoginActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString(Key.EXTRA_ACTION, Key.ACTION_LOGIN_TO_ACCESS);
+            intent.putExtras(intent);
+            startActivityForResult(intent, Key.REQUEST_CODE_LOGIN);
+        }else {
+            startCheckin();
+        }
     }
 
     @Override
@@ -244,7 +255,7 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
                 switchContent(R.id.map_frame, mMapFragment);
             }
         };
-        loadMapTask.execute(lat,lng);
+        loadMapTask.execute(lat, lng);
     }
 
     /**
@@ -283,4 +294,26 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case Key.REQUEST_CODE_LOGIN:
+                if(resultCode == Activity.RESULT_OK){
+                    if(getCurrentUser() != null){
+                        startCheckin();
+                    }
+                }
+                break;
+        }
+    }
+
+    private void startCheckin(){
+        Intent i = new Intent(AddressActivity.this, CheckinActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString(ApiConfig.PARAM_ADDRESS_ID, address.getId());
+        bundle.putString(ApiConfig.PARAM_NAME, address.getTitle());
+        i.putExtras(bundle);
+        startActivity(i);
+    }
 }

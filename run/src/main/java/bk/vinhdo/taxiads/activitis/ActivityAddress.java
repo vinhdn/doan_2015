@@ -8,6 +8,7 @@
 
 package bk.vinhdo.taxiads.activitis;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -30,9 +31,12 @@ import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.activitis.base.BaseActivity;
 import bk.vinhdo.taxiads.api.loopj.RestClient;
 import bk.vinhdo.taxiads.api.parse.JSONConvert;
+import bk.vinhdo.taxiads.config.ApiConfig;
+import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.fragments.AddressListViewFragment;
 import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
+import bk.vinhdo.taxiads.models.PostModel;
 import bk.vinhdo.taxiads.models.ResponseModel;
 import bk.vinhdo.taxiads.utils.Keys;
 import bk.vinhdo.taxiads.volley.VolleySingleton;
@@ -45,6 +49,7 @@ public class ActivityAddress extends BaseActivity {
     private ListView mDataLv;
     private RelativeLayout mRequestProgress;
     private FrameLayout mContainer;
+    private AddressListViewFragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +84,11 @@ public class ActivityAddress extends BaseActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
                 ResponseModel response = JSONConvert.getResponse(responseString);
-                if(response.isSuccess()){
+                if (response.isSuccess()) {
                     mAddress = JSONConvert.getAddress(response.getData());
+                    mFragment = new AddressListViewFragment(mAddress);
                     getSupportFragmentManager().beginTransaction()
-                            .add(R.id.container, new AddressListViewFragment(mAddress)).commit();
+                            .add(R.id.container, mFragment).commit();
                     mRequestProgress.setVisibility(View.GONE);
                 }
             }
@@ -101,8 +107,16 @@ public class ActivityAddress extends BaseActivity {
 
     @Override
     public void onRightHeaderClick() {
-        Intent i = new Intent(ActivityAddress.this,CheckinActivity.class);
-        startActivity(i);
+        if(getCurrentUser() == null){
+            //TODO Login
+            Intent intent = new Intent(ActivityAddress.this, LoginActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString(Key.EXTRA_ACTION, Key.ACTION_LOGIN_TO_ACCESS);
+            intent.putExtras(intent);
+            startActivityForResult(intent, Key.REQUEST_CODE_LOGIN);
+        }else {
+            startCheckin();
+        }
     }
 
     @Override
@@ -113,6 +127,38 @@ public class ActivityAddress extends BaseActivity {
     @Override
     protected void initViews() {
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case Key.REQUEST_CODE_LOGIN:
+                if(resultCode == Activity.RESULT_OK){
+                    if(getCurrentUser() != null){
+                        startCheckin();
+                    }
+                }
+                break;
+            case Key.REQUEST_CODE_CHECKIN:
+                if(resultCode == Activity.RESULT_OK){
+                    if(data == null) return;
+                    PostModel post = data.getParcelableExtra("post");
+                    if(mFragment != null && post != null){
+                        mFragment.addNewPost(post);
+                    }
+                }
+                break;
+        }
+    }
+
+    private void startCheckin(){
+        Intent i = new Intent(ActivityAddress.this, CheckinActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString(ApiConfig.PARAM_ADDRESS_ID, mAddress.getId());
+        bundle.putString(ApiConfig.PARAM_NAME, mAddress.getName());
+        i.putExtras(bundle);
+        startActivityForResult(i, Key.REQUEST_CODE_CHECKIN);
     }
 
 }

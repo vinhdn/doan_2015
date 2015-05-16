@@ -41,4 +41,28 @@
     <string name="title_activity_activity_test">ActivityTest</string>
     <string name="message_network_is_unavailable">Mất kết nối mạng</string>
     <string name="generic_error">Error!</string>
+    <string name="residence">Residence</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="signin">Sign in</string>
+    <string name="signin_facebook">Sign in with Facebook</string>
+
+    <string name="choose_a_picture">Choose a Picture</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="cancel">Cancel</string>
+
+    <string-array name="type_image">
+        <item>@string/take_picture</item>
+        <item>@string/choose_from_gallery</item>
+        <item>@string/cancel</item>
+    </string-array>
+
+    <string name="saving_image">Saving image</string>
+    <string name="preparing_card">Preparing card</string>
+    <string name="no_storage_card">No storage card</string>
+    <string name="not_enough_space">Not enough space</string>
+    <string name="error_enter_email">Please enter your email address</string>
+    <string name="error_enter_email_correct">Please enter correct email address</string>
+    <string name="error_enter_password">Please enter your password</string>
+    <string name="error">Error</string>
 </resources>

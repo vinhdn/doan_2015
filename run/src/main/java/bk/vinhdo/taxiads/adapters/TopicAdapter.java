@@ -21,6 +21,7 @@ import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
 import bk.vinhdo.taxiads.models.PostModel;
 import bk.vinhdo.taxiads.models.Tip;
+import bk.vinhdo.taxiads.utils.getimage.RateUtil;
 import bk.vinhdo.taxiads.utils.view.CustomTextView;
 
 /**
@@ -76,6 +77,11 @@ public class TopicAdapter extends BaseAdapter {
                 }
             }
             nameTv.setText(mAddress.getName());
+            if(mAddress.getRate() > 0){
+                RateUtil.SetRatingView(mAddress.getRate()/2, convertView.findViewById(R.id.item_rating_frame), 28);
+            }else{
+                convertView.findViewById(R.id.item_rating_frame).setVisibility(View.GONE);
+            }
             return convertView;
         }
         if(position <= 2){

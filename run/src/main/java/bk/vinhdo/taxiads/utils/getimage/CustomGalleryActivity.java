@@ -1,6 +1,5 @@
 package bk.vinhdo.taxiads.utils.getimage;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -30,8 +29,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import bk.vinhdo.taxiads.R;
+import bk.vinhdo.taxiads.activitis.base.BaseActivity;
 
-public class CustomGalleryActivity extends Activity {
+public class CustomGalleryActivity extends BaseActivity {
 
 	GridView gridGallery;
 	Handler handler;
@@ -55,6 +55,40 @@ public class CustomGalleryActivity extends Activity {
 		}
 		initImageLoader();
 		init();
+	}
+
+	@Override
+	public void setActionView() {
+		setVisibleRightImage(false);
+		setVisibleRightText(false);
+		setVisibleLeftImage(true);
+		setBackgroundLeftImage(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+		setBackgroundTitleText("Select image",android.R.color.transparent);
+	}
+
+	@Override
+	protected void customHeaderView() {
+
+	}
+
+	@Override
+	public void onLeftHeaderClick() {
+		finish();
+	}
+
+	@Override
+	public void onRightHeaderClick() {
+
+	}
+
+	@Override
+	protected void initModels(Bundle savedInstanceState) {
+
+	}
+
+	@Override
+	protected void initViews() {
+
 	}
 
 	private void initImageLoader() {

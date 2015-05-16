@@ -32,6 +32,7 @@ import bk.vinhdo.taxiads.activitis.ActivityAddress;
 import bk.vinhdo.taxiads.adapters.TopicAdapter;
 import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
+import bk.vinhdo.taxiads.models.PostModel;
 
 /**
  * Created by Vinh on 3/10/15.
@@ -40,7 +41,7 @@ public class AddressListViewFragment extends BaseFragment {
 
     private ListView mListView;
     private AddressModel mAddress;
-
+    private TopicAdapter mAdapter;
     public AddressListViewFragment(AddressModel address){
         this.mAddress = address;
     }
@@ -53,12 +54,18 @@ public class AddressListViewFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mListView = (ListView) inflater.inflate(R.layout.activity_address_listview,container,false);
-        mListView.setAdapter(new TopicAdapter(getActivity(),true,this.mAddress));
+        mAdapter = new TopicAdapter(getActivity(),true,this.mAddress);
+        mListView.setAdapter(mAdapter);
         return mListView;
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+    }
+
+    public void addNewPost(PostModel post){
+        mAddress.getListPosts().add(0,post);
+        mAdapter.notifyDataSetChanged();
     }
 }

@@ -4,10 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/navigate_bar"
-        layout="@layout/navigate_bar" />
-
     <bk.vinhdo.taxiads.utils.view.CustomEditText
         android:id="@+id/content_edt"
         android:padding="10dp"
@@ -16,18 +12,21 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:gravity="top"
-        android:hint="Say something about these photos" />
+        android:background="@android:color/transparent"
+        android:hint="Say something about these address" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/gray_background"
         android:layout_weight="1">
 
         <ImageView
             android:id="@+id/image_checkin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/no_avatar"
+            android:padding="10dp"
+            android:background="@drawable/add_image"
             android:layout_centerInParent="true" />
     </RelativeLayout>
 

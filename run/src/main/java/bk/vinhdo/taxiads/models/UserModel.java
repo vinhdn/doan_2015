@@ -12,7 +12,7 @@ import bk.vinhdo.taxiads.models.BaseModel;
 @DatabaseTable(tableName = "User")
 public class UserModel extends BaseModel{
     @SerializedName("id")
-    @DatabaseField
+    @DatabaseField(id = true)
     private String id;
 
     @SerializedName("facebook_id")

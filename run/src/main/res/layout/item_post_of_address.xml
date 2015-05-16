@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:padding="10dp"
     >
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:id="@+id/image_tip"
         android:scaleType="centerCrop"
-        android:src="@drawable/create_place_location"
+        android:src="@drawable/shape_grey_radius"
         android:visibility="visible"
         />
     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -45,6 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/gray_text"
             />
         <LinearLayout
             android:layout_width="wrap_content"

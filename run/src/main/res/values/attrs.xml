@@ -22,4 +22,8 @@
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
+    <declare-styleable name="CircleImage">
+        <attr name="borderWidth" format="integer" />
+        <attr name="shadowWidth" format="integer" />
+    </declare-styleable>
 </resources>

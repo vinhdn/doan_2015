@@ -80,6 +80,8 @@ public class MapsActivity extends BaseActivity implements
     private HashMap<String, Marker> addressMarker = new HashMap<>();
     private boolean isProcessing = false;
     private final long SECOND = 04;
+    private String mAction;
+    private String mCategoryId;
 
     ViewPager lvAddress;
     ItemAddressListViewAdapter adapter;
@@ -143,16 +145,17 @@ public class MapsActivity extends BaseActivity implements
         setContentView(R.layout.activity_maps, false);
         String action = getIntent().getStringExtra(Key.EXTRA_ACTION);
         if (action != null) {
+            mAction = action;
             if (action.equals(Key.KEY_NEARBY)) {
-
+                mCategoryId = null;
             } else if (action.equals(Key.KEY_CAFE)) {
-
+                mCategoryId = Key.KEY_CATE_ID_CAFE;
             } else if (action.equals(Key.KEY_SHOP)) {
-
-            } else if (action.equals(Key.KEY_REPAIR)) {
-
+                mCategoryId = Key.KEY_CATE_ID_SHOP_AND_SERVICE;
+            } else if (action.equals(Key.KEY_RESIDENCE)) {
+                mCategoryId = Key.KEY_CATE_ID_RESIDENCE;
             } else if (action.equals(Key.KEY_RESTAURANT)) {
-
+                mCategoryId = Key.KEY_CATE_ID_RESTAURANT;
             } else if (action.equals(Key.KEY_HEATH)) {
 
             }
@@ -311,7 +314,7 @@ public class MapsActivity extends BaseActivity implements
 
     @Override
     public void onLeftHeaderClick() {
-
+        finish();
     }
 
     @Override
@@ -463,8 +466,8 @@ public class MapsActivity extends BaseActivity implements
         listAddressMarker.put(p, marker);
     }
 
-    private void getAddress(double lat, double lng){
-        RestClient.getListAddress(lat, lng, 20, new TextHttpResponseHandler() {
+    private void getAddress(double lat, double lng) {
+        RestClient.getListAddress(lat, lng,10000, mCategoryId, null, 20, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
 
@@ -475,7 +478,7 @@ public class MapsActivity extends BaseActivity implements
                 ResponseModel response = JSONConvert.getResponse(responseString);
                 if (response.isSuccess()) {
                     List<AddressModel> listAddrs = JSONConvert.getAddresses(response.getData());
-                    if (listAddrs != null) {
+                    if (listAddrs != null && listAddrs.size() > 0) {
                         Log.d("Size Addrs", listAddrs.size() + "");
                         ArrayList<AddressModel> list = new ArrayList<>();
                         list.addAll(listAddress);
@@ -505,7 +508,7 @@ public class MapsActivity extends BaseActivity implements
                         CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
                         mMap.animateCamera(cu);
                     } else {
-                        Log.d("Size Addrs", "NULL");
+                        Log.d("Size Addrs", "NULL 0r 0");
                     }
                 }
             }
@@ -738,7 +741,7 @@ public class MapsActivity extends BaseActivity implements
     @Override
     public void onClick(Marker marker) {
         AddressModel address = JSONConvert.getAddress(marker.getSnippet());
-        if(address.getIdInList() >= 0){
+        if (address.getIdInList() >= 0) {
             lvAddress.setCurrentItem(address.getIdInList());
         }
         //tvTitleMarkerClick.setText(marker.getTitle());

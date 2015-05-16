@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick(R.id.main_addr_repair)
+    @OnClick(R.id.main_addr_residence)
     public void repair(){
 
     }

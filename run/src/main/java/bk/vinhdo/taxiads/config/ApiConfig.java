@@ -85,4 +85,6 @@ public class ApiConfig {
     public static final String URL_CREATE_TIME_OPEN = URL_BASE + "timeopen/create";
     public static final String PARAM_USER_ID = "user_id";
     public static final String PARAM_PHOTO = "photo";
+    public static final String PARAM_DIST = "dist";
+    public static final String PARAM_ACTION = "action";
 }

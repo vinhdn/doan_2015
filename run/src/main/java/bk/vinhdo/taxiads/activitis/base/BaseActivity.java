@@ -7,6 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.ResultReceiver;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.TaxiApplication;
+import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.models.UserModel;
 import bk.vinhdo.taxiads.utils.view.CustomTextView;
 import bk.vinhdo.taxiads.utils.view.SAutoBgImageButton;
@@ -317,4 +319,13 @@ public abstract class BaseActivity extends FragmentActivity {
         }
         return mCurrentUser;
     }
+
+    public ResultReceiver mResultReceiver = new ResultReceiver(new Handler()){
+        @Override
+        protected void onReceiveResult(int resultCode, Bundle resultData) {
+            super.onReceiveResult(resultCode, resultData);
+            String action = resultData.getString(Key.EXTRA_ACTION);
+            String message = resultData.getString(Key.EXTRA_MESSAGE);
+        }
+    };
 }

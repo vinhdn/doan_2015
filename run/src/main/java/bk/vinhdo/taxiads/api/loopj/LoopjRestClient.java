@@ -315,15 +315,15 @@ public class LoopjRestClient {
     }
 
 
-    public static final String TAG = LoopjRestClient.class.getSimpleName();
+    public static final String TAG = "Quanh day - LoopjRest";
 
     public static void showLogRequest(String url, RequestParams params, HashMap<String, String> headers){
-        android.util.Log.d(TAG, "====================================");
-        android.util.Log.d(TAG, "====================================");
+        android.util.Log.d(TAG, "==============================");
+        android.util.Log.d(TAG, "===============================");
         android.util.Log.d(TAG, "url: " + url);
         android.util.Log.d(TAG, "params: " + params);
         android.util.Log.d(TAG, "headers: " + headers);
-        android.util.Log.d(TAG, "====================================");
-        android.util.Log.d(TAG, "====================================");
+        android.util.Log.d(TAG, "===============================");
+        android.util.Log.d(TAG, "===============================");
     }
 }

@@ -1,5 +1,6 @@
 package bk.vinhdo.taxiads.activitis;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -8,11 +9,19 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.ImageSize;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.fragments.FragmentIndex;
 import bk.vinhdo.taxiads.fragments.MainFragment;
+import bk.vinhdo.taxiads.models.UserModel;
+import bk.vinhdo.taxiads.utils.view.CircleImage;
+import bk.vinhdo.taxiads.utils.view.CustomTextView;
 import bk.vinhdo.taxiads.utils.view.MySlidingLayer;
 import bk.vinhdo.taxiads.utils.view.SlidingLayer;
+import bk.vinhdo.taxiads.utils.view.SquareImage;
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 
 /**
@@ -21,6 +30,8 @@ import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 public class SlideMenuActivity extends MaterialNavigationDrawer implements View.OnClickListener{
 
     protected MySlidingLayer mSlidingMenu;
+    private UserModel mCurrentUser;
+
     @Override
     public void init(Bundle bundle) {
         // create sections
@@ -50,13 +61,36 @@ public class SlideMenuActivity extends MaterialNavigationDrawer implements View.
                 Log.d("State", newState + "");
             }
         });
-        View view = LayoutInflater.from(this).inflate(R.layout.layout_menu_header_signup, null, false);
-        setDrawerHeaderCustom(view);
-        changeHeightCustomHeader(12 / 16);
-        setActionButtomMenu(R.layout.layout_action_menu);
-        findViewById(R.id.btn_signup_email).setOnClickListener(this);
-        findViewById(R.id.btn_signup_facebook).setOnClickListener(this);
-        setupSignUp();
+        if(getCurrentUser() == null) {
+            View view = LayoutInflater.from(this).inflate(R.layout.layout_menu_header_signup, null, false);
+            setDrawerHeaderCustom(view);
+            changeHeightCustomHeader(12 / 16);
+            //setActionButtomMenu(R.layout.layout_action_menu);
+            findViewById(R.id.btn_signup_email).setOnClickListener(this);
+            findViewById(R.id.btn_signup_facebook).setOnClickListener(this);
+            setupSignUp();
+        }else{
+            View view = LayoutInflater.from(this).inflate(R.layout.layout_menu_header_info, null, false);
+            setDrawerHeaderCustom(view);
+            changeHeightCustomHeader(12 / 16);
+            setActionButtomMenu(R.layout.layout_action_menu);
+            final CircleImage avatar = (CircleImage)view.findViewById(R.id.image_avatar);
+            ImageSize size = new ImageSize(100, 100);
+            String avatarUrl = getCurrentUser().getAvatarUrl().trim();
+            if(avatarUrl != null && avatarUrl.startsWith("https://")){
+                ImageLoader.getInstance().loadImage(avatarUrl, size, new SimpleImageLoadingListener(){
+                    @Override
+                    public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+                        super.onLoadingComplete(imageUri, view, loadedImage);
+                        avatar.setImageBitmap(loadedImage);
+                    }
+                });
+            }else{
+                // Get Image my server
+            }
+            CustomTextView mNameTv = (CustomTextView) view.findViewById(R.id.user_name);
+            mNameTv.setText((getCurrentUser().getFisrtName() == null ? "" : getCurrentUser().getFisrtName()) + " " + (getCurrentUser().getLastName() == null ? "" : getCurrentUser().getLastName()));
+        }
     }
 
     private void setupSignUp() {
@@ -125,5 +159,12 @@ public class SlideMenuActivity extends MaterialNavigationDrawer implements View.
             case R.id.btn_signup_facebook:
                 break;
         }
+    }
+
+    public UserModel getCurrentUser(){
+        if(mCurrentUser == null){
+            mCurrentUser = UserModel.getCurrentUser();
+        }
+        return mCurrentUser;
     }
 }

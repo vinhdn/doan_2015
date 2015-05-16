@@ -20,7 +20,7 @@
                 android:layout_height="100dp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
-                android:src="@color/common_signin_btn_light_text_default" />
+                android:background="@drawable/shape_grey_radius" />
         </FrameLayout>
 
         <ImageView

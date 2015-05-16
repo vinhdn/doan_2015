@@ -16,6 +16,7 @@ import bk.vinhdo.taxiads.activitis.MapsActivity;
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.activitis.SlideMenuActivity;
 import bk.vinhdo.taxiads.config.Key;
+import bk.vinhdo.taxiads.utils.ToastUtil;
 import bk.vinhdo.taxiads.utils.view.CustomTextView;
 import bk.vinhdo.taxiads.utils.view.SAutoBgImageButton;
 import butterknife.ButterKnife;
@@ -38,7 +39,7 @@ public class MainFragment extends Fragment {
     private ImageView mTitleImage;
 
     //Content
-    SAutoBgImageButton addr_nearby, addr_shop, addr_restaurant, addr_cafe, addr_repair, addr_heath;
+//    SAutoBgImageButton addr_nearby, addr_shop, addr_restaurant, addr_cafe, addr_repair, addr_heath;
     private LinearLayout mLayoutWeather;
 //    public LinearLayout mLLBG;
 
@@ -89,12 +90,12 @@ public class MainFragment extends Fragment {
 
         mRightBarLayout = (RelativeLayout) view.findViewById(R.id.right_layout);
         mLayoutWeather = (LinearLayout) view.findViewById(R.id.weather_main);
-        addr_nearby = (SAutoBgImageButton) view.findViewById(R.id.main_addr_nearby);
-        addr_shop = (SAutoBgImageButton) view.findViewById(R.id.main_addr_shop);
-        addr_restaurant = (SAutoBgImageButton) view.findViewById(R.id.main_addr_restaurant);
-        addr_cafe = (SAutoBgImageButton) view.findViewById(R.id.main_addr_cafe);
-        addr_repair = (SAutoBgImageButton) view.findViewById(R.id.main_addr_repair);
-        addr_heath = (SAutoBgImageButton) view.findViewById(R.id.main_addr_heath);
+//        addr_nearby = (SAutoBgImageButton) view.findViewById(R.id.main_addr_nearby);
+//        addr_shop = (SAutoBgImageButton) view.findViewById(R.id.main_addr_shop);
+//        addr_restaurant = (SAutoBgImageButton) view.findViewById(R.id.main_addr_restaurant);
+//        addr_cafe = (SAutoBgImageButton) view.findViewById(R.id.main_addr_cafe);
+//        addr_repair = (SAutoBgImageButton) view.findViewById(R.id.main_addr_residence);
+//        addr_heath = (SAutoBgImageButton) view.findViewById(R.id.main_addr_heath);
     }
 
     @OnClick(R.id.main_addr_nearby)
@@ -113,15 +114,16 @@ public class MainFragment extends Fragment {
 
     @OnClick(R.id.main_addr_heath)
     public void heath(){
-        Intent i = new Intent(getActivity(), MapsActivity.class);
-        i.putExtra(Key.EXTRA_ACTION,Key.KEY_HEATH);
-        startActivity(i);
+//        Intent i = new Intent(getActivity(), MapsActivity.class);
+//        i.putExtra(Key.EXTRA_ACTION,Key.KEY_HEATH);
+//        startActivity(i);
+        ToastUtil.show("Active in next version");
     }
 
-    @OnClick(R.id.main_addr_repair)
-    public void repair(){
+    @OnClick(R.id.main_addr_residence)
+    public void residence(){
         Intent i = new Intent(getActivity(), MapsActivity.class);
-        i.putExtra(Key.EXTRA_ACTION,Key.KEY_REPAIR);
+        i.putExtra(Key.EXTRA_ACTION,Key.KEY_RESIDENCE);
         startActivity(i);
     }
 

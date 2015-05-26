@@ -66,4 +66,6 @@ public class Key {
     public static final String EXTRA_ID = "id";
     public static final String EXTRA_ACCESSTOKE = "accss_token";
     public static final String ACTION_LOGIN = "ACTION_LOGIN";
+    public static final String KEY_SEARCH = "search";
+    public static final String KEY_CREATE_POST = "CREATE_POST";
 }

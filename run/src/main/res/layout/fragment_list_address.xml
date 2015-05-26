@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/gray_background"
+    android:layout_height="match_parent">
+    <ListView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_address_lv"
+        android:divider="@android:color/transparent"
+        tools:listitem="@layout/item_address_in_list"
+        ></ListView>
+</LinearLayout>

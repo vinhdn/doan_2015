@@ -1,30 +1,89 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MapsActivity">
 
     <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment" />
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <RelativeLayout
         android:id="@+id/list_data_add"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_weight="1"
-        android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
-        >
+        android:layout_weight="1"
+        android:background="@android:color/transparent">
 
         <android.support.v4.view.ViewPager
+            android:id="@+id/lv_address_in_maps"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:background="@android:color/transparent"
-            android:id="@+id/lv_address_in_maps" />
+            android:background="@android:color/transparent" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_margin="5dp"
+        android:visibility="visible"
+        android:id="@+id/search_ll"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <bk.vinhdo.taxiads.utils.view.SAutoBgButton
+                android:id="@+id/close_search_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_error_x"
+                />
+
+            <EditText
+                android:id="@+id/search_edt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:hint="Enter search here..."
+                android:textColor="@color/gray_text"
+                android:textColorHint="@color/gray_text"
+                android:background="@color/gray_background"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_rate_gray"
+            >
+            <bk.vinhdo.taxiads.utils.view.SAutoBgButton
+                android:id="@+id/search_btn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/abc_ic_search_api_mtrl_alpha"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/list_result_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
 </RelativeLayout>

@@ -8,9 +8,13 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -53,6 +57,7 @@ import bk.vinhdo.taxiads.adapters.ItemAddressListViewAdapter;
 import bk.vinhdo.taxiads.api.loopj.RestClient;
 import bk.vinhdo.taxiads.api.parse.JSONConvert;
 import bk.vinhdo.taxiads.config.Key;
+import bk.vinhdo.taxiads.fragments.ListAddressFragment;
 import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
 import bk.vinhdo.taxiads.models.ResponseModel;
@@ -85,6 +90,12 @@ public class MapsActivity extends BaseActivity implements
 
     ViewPager lvAddress;
     ItemAddressListViewAdapter adapter;
+    LinearLayout mSearchLl;
+    EditText mSearchEdt;
+    FrameLayout mListResultFrame;
+    ListAddressFragment mListAddressFragment = new ListAddressFragment();
+
+    boolean isShowSearch;
 
     /**
      * The desired interval for location updates. Inexact. Updates may be more or less frequent.
@@ -142,10 +153,11 @@ public class MapsActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps, false);
         String action = getIntent().getStringExtra(Key.EXTRA_ACTION);
+
         if (action != null) {
             mAction = action;
+            Log.d("ACTION", action);
             if (action.equals(Key.KEY_NEARBY)) {
                 mCategoryId = null;
             } else if (action.equals(Key.KEY_CAFE)) {
@@ -158,8 +170,14 @@ public class MapsActivity extends BaseActivity implements
                 mCategoryId = Key.KEY_CATE_ID_RESTAURANT;
             } else if (action.equals(Key.KEY_HEATH)) {
 
+            }else if(action.equals(Key.KEY_SEARCH)){
+                mCategoryId = null;
+            }else if(action.equals(Key.KEY_CREATE_POST)){
+                mCategoryId = null;
             }
         }
+        setContentView(R.layout.activity_maps, false);
+
         mRequestingLocationUpdates = true;
         mLastUpdateTime = "";
         // Update values using data stored in the Bundle.
@@ -305,6 +323,14 @@ public class MapsActivity extends BaseActivity implements
 //                Log.d("onPageScrollStateChanged(int state)", state + "");
             }
         });
+        mSearchLl = (LinearLayout) findViewById(R.id.search_ll);
+        mSearchEdt = (EditText) findViewById(R.id.search_edt);
+        findViewById(R.id.search_btn).setOnClickListener(this);
+        mListResultFrame = (FrameLayout) findViewById(R.id.list_result_framelayout);
+        if(mAction.equals(Key.KEY_SEARCH) || mAction.equals(Key.KEY_CREATE_POST)){
+            mSearchLl.setVisibility(View.VISIBLE);
+            isShowSearch = true;
+        }
     }
 
     @Override
@@ -319,7 +345,32 @@ public class MapsActivity extends BaseActivity implements
 
     @Override
     public void onRightHeaderClick() {
+        if(mListResultFrame.getVisibility() == View.GONE) {
+            showAddressInList(listAddress, true);
+        }else{
+            showAddressInList(null, false);
+        }
+    }
 
+    /**
+     * Control show/hide request detail
+     */
+    public void showAddressInList(List<AddressModel> listAddress, boolean show) {
+        mListResultFrame.setVisibility(show ? View.VISIBLE : View.GONE);
+
+        if (show) {
+            mListAddressFragment.setDataAddress(listAddress);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.list_result_framelayout, mListAddressFragment);
+            transaction.commit();
+        } else {
+            if (mListAddressFragment != null) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.remove(mListAddressFragment);
+                transaction.commit();
+                mListAddressFragment.setDataAddress(new ArrayList<AddressModel>());
+            }
+        }
     }
 
     @Override
@@ -431,8 +482,8 @@ public class MapsActivity extends BaseActivity implements
         listAddressMarker.put(p, marker);
     }
 
-    private void getAddress(double lat, double lng) {
-        RestClient.getListAddress(lat, lng,10000, mCategoryId, null, 20, new TextHttpResponseHandler() {
+    private void getAddress(double lat, double lng, String query) {
+        RestClient.getListAddress(lat, lng, 10000, mCategoryId, query, 20, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
 
@@ -449,6 +500,7 @@ public class MapsActivity extends BaseActivity implements
                         list.addAll(listAddress);
                         listAddress.clear();
                         listAddress.addAll(listAddrs);
+                        mListAddressFragment.setDataAddress(listAddress);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -555,14 +607,27 @@ public class MapsActivity extends BaseActivity implements
     @Override
     public void onMapLongClick(LatLng latLng) {
         if (isChangePosition) {
-            getAddress(latLng.latitude, latLng.longitude);
+            getAddress(latLng.latitude, latLng.longitude, null);
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13f));
         }
     }
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.search_btn:
+                if(isShowSearch) {
+                    getAddress(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude(), mSearchEdt.getText().toString().trim());
+                }else{
+                    isShowSearch = true;
+                    mSearchLl.setVisibility(View.VISIBLE);
+                }
+                break;
+            case R.id.close_search_btn:
+                isShowSearch = false;
+                mSearchLl.setVisibility(View.GONE);
+                break;
+        }
     }
 
     @Override
@@ -604,7 +669,7 @@ public class MapsActivity extends BaseActivity implements
                     .tilt(40)                   // Sets the tilt of the camera to 30 degrees
                     .build();                   // Creates a CameraPosition from the builder
             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-            getAddress(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
+            getAddress(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude(), null);
         }
         //}
 

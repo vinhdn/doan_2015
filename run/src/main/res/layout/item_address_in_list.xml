@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/bg_cover_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/bg_load_img"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
+        android:baselineAlignBottom="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/rate_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_rate_green"
+            android:gravity="center_vertical"
+            android:text="5.5"
+            android:padding="4dp"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight=".1"
+            android:orientation="vertical">
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:id="@+id/address_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:text="Argento Cafe"
+                android:singleLine="true"
+                android:textStyle="bold" />
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:id="@+id/cate_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffbfc0c6"
+                android:singleLine="true"
+                android:text="shop cafe, restauran"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/distance_tv"
+            android:textColor="@color/hong"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

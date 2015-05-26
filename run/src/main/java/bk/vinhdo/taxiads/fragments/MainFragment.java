@@ -155,9 +155,9 @@ public class MainFragment extends BaseFragment {
 
     @OnClick(R.id.title_text)
     public void search(){
-        /*
-        TODO search Address here
-         */
+        Intent i = new Intent(getActivity(), MapsActivity.class);
+        i.putExtra(Key.EXTRA_ACTION,Key.KEY_SEARCH);
+        startActivity(i);
     }
 
     @OnClick(R.id.weather_main)

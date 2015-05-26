@@ -12,7 +12,7 @@
         android:layout_height="200dp"
         android:id="@+id/image_tip"
         android:scaleType="centerCrop"
-        android:src="@drawable/shape_grey_radius"
+        android:src="@drawable/bg_load_img"
         android:visibility="visible"
         />
     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -54,6 +54,7 @@
             android:layout_gravity="right"
             android:gravity="center_vertical"
             android:orientation="horizontal"
+            android:visibility="gone"
             >
             <ImageView
                 android:layout_width="20dp"

@@ -75,6 +75,8 @@ public class TopicAdapter extends BaseAdapter implements View.OnClickListener{
             final ImageView coverIv = (ImageView)convertView.findViewById(R.id.cover_iv);
             ImageView avatarIv = (ImageView) convertView.findViewById(R.id.image_avatar);
             CustomTextView nameTv = (CustomTextView) convertView.findViewById(R.id.address_name);
+            CustomTextView mRateTv = (CustomTextView) convertView.findViewById(R.id.rate_tv);
+
             if(!TextUtils.isEmpty(mAddress.getCover())){
                 String bestPhoto = mAddress.getCover();
                 ImageSize size = new ImageSize(300, 300);
@@ -91,8 +93,19 @@ public class TopicAdapter extends BaseAdapter implements View.OnClickListener{
                     ImageLoader.getInstance().displayImage(ApiConfig.URL_GET_IMAGE_MYSERVER + bestPhoto, coverIv);
                 }
             }
-            if(mAddress.getRate() < 5){
-
+            float rate = mAddress.getRate();
+            if (rate < 5) {
+                mRateTv.setText("---");
+                mRateTv.setBackgroundResource(R.drawable.bg_rate_gray);
+            } else if (rate < 6.5) {
+                mRateTv.setText(String.format("%.1f", rate));
+                mRateTv.setBackgroundResource(R.drawable.bg_rate_orange);
+            } else if (rate < 8) {
+                mRateTv.setText(String.format("%.1f", rate));
+                mRateTv.setBackgroundResource(R.drawable.bg_rate_yellow);
+            } else {
+                mRateTv.setText(String.format("%.1f", rate));
+                mRateTv.setBackgroundResource(R.drawable.bg_rate_green);
             }
             convertView.findViewById(R.id.rate_btn).setOnClickListener(this);
             SAutoBgImageButton saveBtn =  (SAutoBgImageButton)convertView.findViewById(R.id.save_btn);

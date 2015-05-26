@@ -38,10 +38,10 @@
                 android:typeface="serif" />
 
             <bk.vinhdo.taxiads.utils.view.CustomTextView
-                android:text="Hoang Mai"
+                android:text="Hoàng Mai"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/white"
-                android:textStyle="italic"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
                 customname:customFont="FoursquareIcons-Regular.otf"
                 android:layout_marginBottom="20dp"
@@ -163,7 +163,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/pin_repair" />
+                        android:background="@drawable/pin_hotels" />
 
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
                         android:layout_width="wrap_content"
@@ -214,7 +214,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="match_parent"
-                    android:text="15°C"
+                    android:text="27°C"
                     android:textSize="@dimen/text_size_very_large"
                     android:textColor="@color/white"
                     android:layout_gravity="center_vertical"
@@ -234,7 +234,7 @@
                         android:id="@+id/weather_img_01"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/weather_cloudy_ic"
+                        android:src="@drawable/weather_sunshine_ic"
                         android:layout_gravity="center_horizontal" />
 
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -261,7 +261,7 @@
                         android:id="@+id/weather_img_02"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/weather_cloudy_ic"
+                        android:src="@drawable/weather_sunshine_ic"
                         android:layout_gravity="center_horizontal" />
 
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -270,7 +270,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="THỨ 4"
+                        android:text="THỨ 5"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -288,7 +288,7 @@
                         android:id="@+id/weather_img_03"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/weather_cloudy_ic"
+                        android:src="@drawable/weather_sunshine_ic"
                         android:layout_gravity="center_horizontal" />
 
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -297,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="THỨ 4"
+                        android:text="THỨ 6"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -315,7 +315,7 @@
                         android:id="@+id/weather_img_04"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/weather_cloudy_ic"
+                        android:src="@drawable/weather_sunshine_ic"
                         android:layout_gravity="center_horizontal" />
 
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -324,7 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="THỨ 4"
+                        android:text="THỨ 7"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -341,7 +341,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/weather_cloudy_ic"
+                        android:src="@drawable/weather_sunshine_ic"
                         android:layout_gravity="center_horizontal" />
 
                     <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -349,65 +349,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="THỨ 4"
+                        android:text="CN"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:background="#90ffffff" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                >
-            <LinearLayout
-                android:id="@+id/main_activity"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:background="@drawable/bg_tranf_hong_click"
-                >
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight=".1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/activity_menu"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_large"
-                    android:layout_marginLeft="20dp"
-                    />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="#90ffffff" />
-
-                <LinearLayout
-                    android:id="@+id/main_invite_friend"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/bg_tranf_hong_click"
-                    >
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight=".1"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/invite_friends"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_large"
-                        android:layout_marginLeft="20dp"
-                        />
-                </LinearLayout>
-                </LinearLayout>
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"

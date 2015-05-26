@@ -121,6 +121,9 @@ public class AddressModel extends BaseModel{
     @SerializedName("id_in_list")
     private int idInList = -1;
 
+    @SerializedName("distance")
+    private int distance;
+
     public long getDateUpdate() {
         return dateUpdate;
     }
@@ -365,5 +368,13 @@ public class AddressModel extends BaseModel{
 
     public void setBestPhoto(String bestPhoto) {
         this.bestPhoto = bestPhoto;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
     }
 }

@@ -64,8 +64,8 @@ public class ActivityAddress extends BaseActivity {
         setVisibleRightImage(true);
         setVisibleLeftImage(true);
         setBackgroundLeftImage(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
-        setBackgroundTitleText("Address",android.R.color.transparent);
-
+        setBackgroundTitleText("",android.R.color.transparent);
+        setBackgroundRightImage(R.drawable.ic_post);
 //        final Drawable cd = getResources().getDrawable(R.drawable.ab_background_light);
 //        layout_actionbar.setBackgroundDrawable(cd);
 //        cd.setAlpha(100);
@@ -78,7 +78,7 @@ public class ActivityAddress extends BaseActivity {
         RestClient.getInfoAddress(getCurrentUser() == null ? null : getCurrentUser().getAccessToken(), mAddress.getId(), new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-
+                finish();
             }
 
             @Override
@@ -86,6 +86,7 @@ public class ActivityAddress extends BaseActivity {
                 ResponseModel response = JSONConvert.getResponse(responseString);
                 if (response.isSuccess()) {
                     mAddress = JSONConvert.getAddress(response.getData());
+                    setBackgroundTitleText(mAddress.getName(),android.R.color.transparent);
                     mFragment = new AddressListViewFragment(mAddress);
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, mFragment).commit();

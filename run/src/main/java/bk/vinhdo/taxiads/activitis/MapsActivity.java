@@ -274,7 +274,7 @@ public class MapsActivity extends BaseActivity implements
         setVisibleRightImage(true);
         setVisibleLeftImage(true);
         setBackgroundLeftImage(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
-        setBackgroundRightImage(R.drawable.audience_location_list);
+        setBackgroundRightImage(R.drawable.ic_lists);
         setBackgroundTitleText("Maps", android.R.color.transparent);
         lvAddress = (ViewPager) findViewById(R.id.lv_address_in_maps);
         listAddress = new ArrayList<>();
@@ -378,7 +378,7 @@ public class MapsActivity extends BaseActivity implements
             if (mMap != null) {
                 mMap.setOnMapLongClickListener(this);
                 mMap.setMyLocationEnabled(true);
-                mMap.getUiSettings().setMyLocationButtonEnabled(false);
+                mMap.getUiSettings().setMyLocationButtonEnabled(true);
                 mMap.getUiSettings().setMapToolbarEnabled(false);
                 mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                     @Override
@@ -387,24 +387,6 @@ public class MapsActivity extends BaseActivity implements
                         return true;
                     }
                 });
-//                Criteria criteria = new Criteria();
-//
-//                lastKnownLocation = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
-//                if (lastKnownLocation != null) {
-//                    Log.d("Current Location", lastKnownLocation.getLatitude() + "  " + lastKnownLocation.getLongitude());
-//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-//                            new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude()), 13));
-//
-//                    CameraPosition cameraPosition = new CameraPosition.Builder()
-//                            .target(new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude()))      // Sets the center of the map to location user
-//                            .zoom(17)                   // Sets the zoom
-//                            .bearing(90)                // Sets the orientation of the camera to east
-//                            .tilt(40)                   // Sets the tilt of the camera to 30 degrees
-//                            .build();                   // Creates a CameraPosition from the builder
-//                    mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-//                    getData(LINK_API + lastKnownLocation.getLatitude() + "," + lastKnownLocation.getLongitude() + KEY);
-//                } else
-//                    getData("");
                 GoogleMap.InfoWindowAdapter infoWindowAdapter = new InfoMapsAdapter(this, this);
                 mMap.setInfoWindowAdapter(infoWindowAdapter);
                 setUpMap();
@@ -419,40 +401,23 @@ public class MapsActivity extends BaseActivity implements
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        //mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker").icon(BitmapDescriptorFactory.fromResource(R.drawable.mapicon_blue_background_white_car_smiley)));
     }
 
     private void addAddToMap(AddressModel add, int p, boolean isMoveCamera) {
         int IDIm = new Random().nextInt(6);
+
         int imageRe;
-        switch (IDIm) {
-            case 0:
-                imageRe = R.drawable.bank;
-                break;
-            case 2:
-                imageRe = R.drawable.cafe;
-                break;
-            case 3:
-                imageRe = R.drawable.edu;
-                break;
-            case 4:
-                imageRe = R.drawable.shop;
-                break;
-            case 5:
-                imageRe = R.drawable.y_te;
-                break;
-            default:
-                imageRe = R.drawable.mapicon_blue_background_white_car_smiley;
+        if(add.getCategoryId().equals(Key.KEY_CATE_ID_CAFE)){
+            imageRe = R.drawable.pin_cafe;
+        }else if(add.getCategoryId().equals(Key.KEY_CATE_ID_SHOP_AND_SERVICE)){
+            imageRe = R.drawable.pin_shop;
+        }else if(add.getCategoryId().equals(Key.KEY_CATE_ID_RESTAURANT)){
+            imageRe = R.drawable.pin_restaurant;
+        }else if(add.getCategoryId().equals(Key.KEY_CATE_ID_RESIDENCE)){
+            imageRe = R.drawable.pin_hotels;
+        }else {
+            imageRe = R.drawable.pin_nearby;
         }
-//        if(addressMarker.get(add.getId()) == null) {
-//            Marker marker = mMap.addMarker(new MarkerOptions()
-//                    .position(new LatLng(add.getLat(), add.getLng()))
-//                    .title(add.getTitle())
-//                    .snippet(add.getJson().toString())
-//                    .icon(BitmapDescriptorFactory.fromResource(imageRe)));
-//            add.setIDMarker(marker.getId());
-//            addressMarker.put(add.getId(), marker);
-//        }
         if (listAddressMarker.get(p) != null) {
             listAddressMarker.get(p).remove();
             listAddressMarker.remove(p);
@@ -500,7 +465,6 @@ public class MapsActivity extends BaseActivity implements
                         for (int i = 0; i < listAddress.size(); i++) {
                             AddressModel add = listAddress.get(i);
                             add.setIdInList(i);
-//            add.setJson(add.getJson().put("listID", i));
                             addAddToMap(add, i, false);
                         }
                         LatLngBounds bounds = builderBounds.build();
@@ -592,7 +556,7 @@ public class MapsActivity extends BaseActivity implements
     public void onMapLongClick(LatLng latLng) {
         if (isChangePosition) {
             getAddress(latLng.latitude, latLng.longitude);
-            //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16f));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13f));
         }
     }
 
@@ -603,11 +567,11 @@ public class MapsActivity extends BaseActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
-        mCurrentLocation = location;
-        mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
-        Toast.makeText(this, "UpdateLocation",
-                Toast.LENGTH_SHORT).show();
-        getAddress(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
+//        mCurrentLocation = location;
+//        mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
+//        Toast.makeText(this, "UpdateLocation",
+//                Toast.LENGTH_SHORT).show();
+//        getAddress(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
         //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),location.getLongitude()), 16f));
     }
 
@@ -635,7 +599,7 @@ public class MapsActivity extends BaseActivity implements
 
             CameraPosition cameraPosition = new CameraPosition.Builder()
                     .target(new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude()))      // Sets the center of the map to location user
-                    .zoom(17)                   // Sets the zoom
+                    .zoom(13)                   // Sets the zoom
                     .bearing(90)                // Sets the orientation of the camera to east
                     .tilt(40)                   // Sets the tilt of the camera to 30 degrees
                     .build();                   // Creates a CameraPosition from the builder

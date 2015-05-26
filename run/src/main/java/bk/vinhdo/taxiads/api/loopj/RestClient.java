@@ -1,5 +1,7 @@
 package bk.vinhdo.taxiads.api.loopj;
 
+import android.text.TextUtils;
+
 import com.google.android.gms.common.api.Api;
 import com.google.android.gms.maps.model.LatLng;
 import com.loopj.android.http.FileAsyncHttpResponseHandler;
@@ -81,4 +83,34 @@ public class RestClient {
         LoopjRestClient.post(ApiConfig.URL_CREATE_POST, params, responseHandler);
     }
 
+    public static void likeAddress(String accessToken, String addressId, TextHttpResponseHandler responseHandler){
+        RequestParams params = new RequestParams();
+        params.put(ApiConfig.PARAM_ACCESS_TOKEN, accessToken);
+        params.put(ApiConfig.PARAM_ADDRESS_ID, addressId);
+
+        LoopjRestClient.post(ApiConfig.URL_LIKE_ADDRESS, params, responseHandler);
+    }
+
+    public static void rateAddress(String accessToken, String addressId, TextHttpResponseHandler responseHandler){
+        RequestParams params = new RequestParams();
+        params.put(ApiConfig.PARAM_ACCESS_TOKEN, accessToken);
+        params.put(ApiConfig.PARAM_ADDRESS_ID, addressId);
+
+        LoopjRestClient.post(ApiConfig.URL_LIKE_ADDRESS, params, responseHandler);
+    }
+
+    public static void register(String email, String firstName, String lastName,long birthday, String password,File avatar, TextHttpResponseHandler paramTextHttpResponseHandler) {
+        RequestParams localRequestParams = new RequestParams();
+        localRequestParams.put("email", email);
+        localRequestParams.put("first_name", firstName);
+        localRequestParams.put("last_name", lastName);
+        localRequestParams.put("password", password);
+        localRequestParams.put("birthday",birthday);
+        try {
+            localRequestParams.put("avatar", avatar);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        LoopjRestClient.post(ApiConfig.URL_REGISTER, localRequestParams, paramTextHttpResponseHandler);
+    }
 }

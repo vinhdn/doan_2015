@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <bk.vinhdo.taxiads.utils.view.CustomTextView
+        android:id="@+id/title_fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/item_fb_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <bk.vinhdo.taxiads.utils.view.FeedbackItem
+                    android:id="@+id/recommended_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </bk.vinhdo.taxiads.utils.view.FeedbackItem>
+
+                <bk.vinhdo.taxiads.utils.view.FeedbackItem
+                    android:id="@+id/friendliness_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </bk.vinhdo.taxiads.utils.view.FeedbackItem>
+
+                <bk.vinhdo.taxiads.utils.view.FeedbackItem
+                    android:id="@+id/punctuality_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </bk.vinhdo.taxiads.utils.view.FeedbackItem>
+
+                <bk.vinhdo.taxiads.utils.view.FeedbackItem
+                    android:id="@+id/cleanliness_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </bk.vinhdo.taxiads.utils.view.FeedbackItem>
+
+                <bk.vinhdo.taxiads.utils.view.FeedbackItem
+                    android:id="@+id/safeness_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </bk.vinhdo.taxiads.utils.view.FeedbackItem>
+            </LinearLayout>
+
+            <bk.vinhdo.taxiads.utils.view.CustomTextView
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Comment" />
+
+            <bk.vinhdo.taxiads.utils.view.CustomEditText
+                android:id="@+id/fb_comment_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_border_gray"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/feedback_text_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <bk.vinhdo.taxiads.utils.view.CustomTextView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="submit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/feedback_green"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

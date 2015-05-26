@@ -10,6 +10,15 @@
     android:gravity="bottom"
     >
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        />
+
     <EditText
         android:id="@+id/email_edt"
         android:layout_width="match_parent"
@@ -38,6 +47,17 @@
         android:text="@string/signin"
         android:background="@drawable/bg_disable"
         android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="true"
+        />
+
+    <bk.vinhdo.taxiads.utils.view.CustomTextView
+        android:id="@+id/forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:gravity="center_horizontal"
+        android:textColor="@color/hong"
         android:layout_marginTop="10dp"
         android:textAllCaps="true"
         />

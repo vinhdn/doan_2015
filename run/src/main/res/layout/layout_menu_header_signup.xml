@@ -13,21 +13,15 @@
         android:orientation="horizontal"
         android:background="@drawable/bg_signup_fb_selector"
         >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:src="@drawable/facebook_icon"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            />
         <bk.vinhdo.taxiads.utils.view.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
-            android:text="@string/signup_facebook"
+            android:text="@string/login"
             android:textAlignment="center"
             android:paddingRight="30dp"
-            android:paddingLeft="10dp"
+            android:paddingLeft="30dp"
+            android:textAllCaps="true"
             android:gravity="center"
             android:textSize="@dimen/text_size_small"
             android:textColor="@color/white" />

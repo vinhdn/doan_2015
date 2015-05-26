@@ -65,4 +65,9 @@
     <string name="error_enter_email_correct">Please enter correct email address</string>
     <string name="error_enter_password">Please enter your password</string>
     <string name="error">Error</string>
+    <string name="logout">Logout</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="repassword">Confirm Password</string>
+    <string name="signup_google">Signup with google</string>
+    <string name="login">login</string>
 </resources>

@@ -25,7 +25,7 @@ import butterknife.OnClick;
 /**
  * Created by Vinh on 2/4/15.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends BaseFragment {
 
     // view header
     private View mNavigateView;
@@ -158,5 +158,10 @@ public class MainFragment extends Fragment {
         /*
         TODO search Address here
          */
+    }
+
+    @OnClick(R.id.weather_main)
+    public void clickWeather(){
+
     }
 }

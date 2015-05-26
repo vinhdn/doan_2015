@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <bk.vinhdo.taxiads.utils.view.CustomTextView
+        android:id="@+id/fb_title_tv"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_dk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/feedback_red"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="DK"
+            android:textColor="@color/white" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_00"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/feedback_gray"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="0"
+            android:textColor="@color/feedback_text_gray" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/feedback_gray"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="1"
+            android:textColor="@color/feedback_text_gray" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/feedback_gray"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="2"
+            android:textColor="@color/feedback_text_gray" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/feedback_gray"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="3"
+            android:textColor="@color/feedback_text_gray" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_04"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/feedback_gray"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="4"
+            android:textColor="@color/feedback_text_gray" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/fb_05"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/feedback_gray"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="5"
+            android:textColor="@color/feedback_text_gray" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/low_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="LOW"
+            android:textColor="@color/feedback_text_gray"
+            android:textSize="@dimen/text_size_normal" />
+
+        <bk.vinhdo.taxiads.utils.view.CustomTextView
+            android:id="@+id/high_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="HIGH"
+            android:textColor="@color/feedback_text_gray"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+</LinearLayout>

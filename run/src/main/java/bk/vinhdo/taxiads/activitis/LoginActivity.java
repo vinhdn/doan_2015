@@ -87,7 +87,8 @@ public class LoginActivity extends BaseActivity {
         RestClient.login(mEmail, mPassword, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-
+                ResponseModel response = JSONConvert.getResponse(responseString);
+                ToastUtil.show(response.getMessage());
             }
 
             @Override
@@ -97,6 +98,7 @@ public class LoginActivity extends BaseActivity {
                     UserModel user = JSONConvert.getUser(response.getData());
                     user.create();
                     setResult(RESULT_OK);
+                    finish();
                 }else {
                     ToastUtil.show(response.getMessage());
                 }

@@ -52,11 +52,13 @@ public class ItemAddressFragment extends Fragment {
         TextView title = (TextView)view.findViewById(R.id.info_maps_title);
         TextView tvRate = (TextView)view.findViewById(R.id.info_maps_rate);
         TextView tvContent = (TextView)view.findViewById(R.id.info_maps_content);
+        TextView tvDistance = (TextView)view.findViewById(R.id.distance_tv);
         title.setText(address.getName());
         if(address.getRate() > 0){
-            tvRate.setText(String.valueOf(address.getRate()));
+            tvRate.setText(String.format("%.1f", address.getRate()));
         }
         tvContent.setText(address.getCategory().getName());
+        tvDistance.setText(String.format("%.1f",((float)address.getDistance() / 1000f)));
         return view;
     }
 }

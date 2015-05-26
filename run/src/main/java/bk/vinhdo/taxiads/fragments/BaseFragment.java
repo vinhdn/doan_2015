@@ -1,9 +1,13 @@
 package bk.vinhdo.taxiads.fragments;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import bk.vinhdo.taxiads.TaxiApplication;
+import bk.vinhdo.taxiads.listeners.AlertListener;
 import bk.vinhdo.taxiads.models.UserModel;
 
 /**
@@ -47,10 +51,30 @@ public abstract class BaseFragment extends Fragment{
         mRidesUser = UserModel.getCurrentUser();
     }
 
-    public UserModel getmRidesUser() {
+    public UserModel getCurrentUser() {
         if(mRidesUser == null){
             mRidesUser = UserModel.getCurrentUser();
         }
         return mRidesUser;
+    }
+
+    public void showConfirmDialog(Context context, String title, String message, final AlertListener alertListener) {
+        new AlertDialog.Builder(context).setTitle(title)
+                .setCancelable(false).setMessage(message)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        alertListener.onPositiveButton(dialog);
+                    }
+                }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                alertListener.onNegativeButton(dialog);
+            }
+        }).show();
     }
 }

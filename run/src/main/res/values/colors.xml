@@ -10,4 +10,14 @@
     <color name="bg_register">#040405</color>
     <color name="bg_edit_register">#3f4045</color>
     <color name="blue">#006cff</color>
+    <color name="green_btn">#10b302</color>
+    <color name="yellow_rate">#dddb41</color>
+    <color name="orange_rate">#F57C00</color>
+    <color name="gray_rate">#727272</color>
+    <color name="feedback_green">#27ba1b</color>
+    <color name="feedback_red">#e53935</color>
+    <color name="feedback_orange">#fb8c00</color>
+    <color name="feedback_gray">#efefef</color>
+    <color name="feedback_text_gray">#979797</color>
+    <color name="gray_border">#d6e0e5</color>
 </resources>

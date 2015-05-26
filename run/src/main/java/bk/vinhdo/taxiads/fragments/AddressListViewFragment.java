@@ -19,6 +19,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -29,6 +30,7 @@ import java.lang.ref.WeakReference;
 
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.activitis.ActivityAddress;
+import bk.vinhdo.taxiads.activitis.base.BaseActivity;
 import bk.vinhdo.taxiads.adapters.TopicAdapter;
 import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
@@ -54,8 +56,14 @@ public class AddressListViewFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mListView = (ListView) inflater.inflate(R.layout.activity_address_listview,container,false);
-        mAdapter = new TopicAdapter(getActivity(),true,this.mAddress);
+        mAdapter = new TopicAdapter((BaseActivity)getActivity(),true,this.mAddress);
         mListView.setAdapter(mAdapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
         return mListView;
     }
 

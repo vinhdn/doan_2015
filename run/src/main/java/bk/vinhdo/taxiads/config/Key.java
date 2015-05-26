@@ -63,4 +63,7 @@ public class Key {
     public static final int REQUEST_CODE_LOGIN = 101;
     public static final String ACTION_LOGIN_TO_ACCESS = "ACTION_LOGIN_TO_ACCESS";
     public static final int REQUEST_CODE_CHECKIN = 102;
+    public static final String EXTRA_ID = "id";
+    public static final String EXTRA_ACCESSTOKE = "accss_token";
+    public static final String ACTION_LOGIN = "ACTION_LOGIN";
 }

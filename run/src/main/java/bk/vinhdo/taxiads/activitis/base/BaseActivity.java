@@ -1,6 +1,8 @@
 package bk.vinhdo.taxiads.activitis.base;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
@@ -23,6 +25,7 @@ import android.widget.Toast;
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.TaxiApplication;
 import bk.vinhdo.taxiads.config.Key;
+import bk.vinhdo.taxiads.listeners.AlertListener;
 import bk.vinhdo.taxiads.models.UserModel;
 import bk.vinhdo.taxiads.utils.view.CustomTextView;
 import bk.vinhdo.taxiads.utils.view.SAutoBgImageButton;
@@ -328,4 +331,24 @@ public abstract class BaseActivity extends FragmentActivity {
             String message = resultData.getString(Key.EXTRA_MESSAGE);
         }
     };
+
+    public void showConfirmDialog(Context context, String title, String message, final AlertListener alertListener) {
+        new AlertDialog.Builder(context).setTitle(title)
+                .setCancelable(false).setMessage(message)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        alertListener.onPositiveButton(dialog);
+                    }
+                }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                alertListener.onNegativeButton(dialog);
+            }
+        }).show();
+    }
 }

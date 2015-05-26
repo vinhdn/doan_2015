@@ -734,6 +734,10 @@ public abstract class MaterialNavigationDrawer<Fragment> extends ActionBarActivi
         layout.openDrawer(drawer);
     }
 
+    public void closeMenu(){
+        layout.closeDrawer(drawer);
+    }
+
     public void setActionButtomMenu(int id){
         LinearLayout ll = (LinearLayout)findViewById(R.id.id_replace);
         ViewGroup parent = (ViewGroup)ll.getParent();

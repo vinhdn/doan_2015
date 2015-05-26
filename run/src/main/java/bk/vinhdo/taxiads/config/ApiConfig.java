@@ -31,6 +31,8 @@ public class ApiConfig {
     public static final String URL_FORGOT_PASSWORD = URL_BASE + "user/forgotpassword";
     public static final String URL_GET_PROFILE = URL_BASE + "user/getprofile";
 
+    public static final String URL_GET_IMAGE_MYSERVER = URL_BASE + "assets/images/";
+
     public static final String PARAM_LAT = "lat";
     public static final String PARAM_LNG = "lng";
     public static final String PARAM_EMAIL = "email";

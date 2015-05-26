@@ -3,6 +3,7 @@ package bk.vinhdo.taxiads.adapters;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -14,6 +15,7 @@ import org.json.JSONObject;
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.api.parse.JSONConvert;
 import bk.vinhdo.taxiads.models.AddressModel;
+import bk.vinhdo.taxiads.utils.view.CustomTextView;
 
 /**
  * Created by Vinh on 1/21/15.
@@ -39,18 +41,10 @@ public class InfoMapsAdapter implements GoogleMap.InfoWindowAdapter {
     @Override
     public View getInfoContents(Marker marker) {
         marker.hideInfoWindow();
-        View v = context.getLayoutInflater().inflate(R.layout.item_info_maps, null);
-        TextView tvRate = (TextView)v.findViewById(R.id.info_maps_rate);
-        TextView tvTitle = (TextView)v.findViewById(R.id.info_maps_title);
-        TextView tvContent = (TextView)v.findViewById(R.id.info_maps_content);
-        tvTitle.setText(marker.getTitle());
-        Log.d("Marker ID", marker.getId());
+        View v = context.getLayoutInflater().inflate(R.layout.item_title_marker, null);
+        CustomTextView titleTv = (CustomTextView)v.findViewById(R.id.title_tv);
         AddressModel address = JSONConvert.getAddress(marker.getSnippet());
-        if(address.getRate() > 0){
-            tvRate.setText(String.valueOf(address.getRate()));
-        }
-        tvTitle.setText(address.getName());
-        tvContent.setText(address.getCategory().getName());
+        titleTv.setText(address.getName());
         infoClickListener.onClick(marker);
         return v;
     }

@@ -20,6 +20,7 @@ import bk.vinhdo.taxiads.config.ApiConfig;
 import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.models.ResponseModel;
 import bk.vinhdo.taxiads.models.UserModel;
+import bk.vinhdo.taxiads.service.AppIntentService;
 import bk.vinhdo.taxiads.utils.ToastUtil;
 import bk.vinhdo.taxiads.utils.text.ValidateUtil;
 import butterknife.ButterKnife;
@@ -97,6 +98,7 @@ public class LoginActivity extends BaseActivity {
                 if(response.isSuccess()){
                     UserModel user = JSONConvert.getUser(response.getData());
                     user.create();
+                    AppIntentService.startActionGetListSaved();
                     setResult(RESULT_OK);
                     finish();
                 }else {

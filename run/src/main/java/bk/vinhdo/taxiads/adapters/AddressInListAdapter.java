@@ -67,7 +67,7 @@ public class AddressInListAdapter extends BaseAdapter {
             holder.mCateAddressTv.setText(address.getAddress());
         } else if (address.getStreetNumber() != null) {
             holder.mCateAddressTv.setText(address.getStreetNumber());
-        }{
+        }else{
             holder.mCateAddressTv.setText("");
         }
         float rate = address.getRate();
@@ -84,6 +84,7 @@ public class AddressInListAdapter extends BaseAdapter {
             holder.mRateTv.setText(String.format("%.1f", rate));
             holder.mRateTv.setBackgroundResource(R.drawable.bg_rate_green);
         }
+        holder.mCoverIv.setBackgroundResource(R.drawable.bg_load_img);
         if (!TextUtils.isEmpty(address.getCover())) {
             String bestPhoto = address.getCover();
             ImageSize size = new ImageSize(300, 120);
@@ -107,6 +108,8 @@ public class AddressInListAdapter extends BaseAdapter {
             }
         }
 
+        holder.mDistanceTv.setText(String.format("%.1f km",((float)address.getDistance() / 1000f)));
+
         return convertView;
     }
 
@@ -123,6 +126,12 @@ public class AddressInListAdapter extends BaseAdapter {
 
         @InjectView(R.id.cate_address_tv)
         CustomTextView mCateAddressTv;
+
+        @InjectView(R.id.distance_tv)
+        CustomTextView mDistanceTv;
+
+        @InjectView(R.id.delete_btn)
+        CustomTextView mDeleteBtn;
 
         public ItemHolder(View itemView) {
             ButterKnife.inject(this, itemView);

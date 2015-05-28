@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TaxiAdsBK</string>
+    <string name="facebook_app_id">597533300380476</string>
+    <string name="app_name">Around here</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_address">AddressActivity</string>
     <string name="hello_world">Hello world!</string>
@@ -10,18 +11,32 @@
     <string name="title_activity_main">MainActivity</string>
 
     <!-- Home Screen-->
-    <string name="near_by">Near by</string>
+    <string name="near_by">Around here</string>
     <string name="shop">Shop</string>
     <string name="restaurant">Restaurant</string>
     <string name="cafe">Cafe</string>
     <string name="repair">Repair</string>
     <string name="health">Health</string>
 
+    <string name="result_dialog_title">Result</string>
+    <string name="result_dialog_button_text">Thanks!</string>
+    <string name="result_dialog_text_with_id">Posted Open Graph action, id: %1$s</string>
+    <string name="result_dialog_text_default">Post action complete.</string>
+    <string name="result_dialog_text_canceled">Post canceled.</string>
+    <string name="progress_dialog_text">Announcing, please wait...</string>
+    <string name="single_user_selected">%1$s</string>
+
+    <string name="error_dialog_default_text">No response from server.</string>
+    <string name="error_transient">A temporary error occurred, please try again later.</string>
+    <string name="error_unknown">An unknown error occurred, please contact the developer with the following message: %1$s</string>
+    <string name="error_dialog_title">Something Went Wrong</string>
+    <string name="error_dialog_button_text">OK</string>
+
     <!-- Menu -->
-    <string name="home_menu">Home</string>
-    <string name="activity_menu">Activity</string>
+    <string name="home_menu">HOME</string>
+    <string name="activity_menu">ACTIVITY</string>
     <string name="notifi_menu">Notification</string>
-    <string name="setting_menu">Setting</string>
+    <string name="setting_menu">SETTING</string>
 
     <!-- Register -->
     <string name="create_account">Create an account</string>
@@ -39,7 +54,7 @@
     <string name="invite_friends">Invite friends</string>
     <string name="title_activity_activity_address">ActivityAddress</string>
     <string name="title_activity_activity_test">ActivityTest</string>
-    <string name="message_network_is_unavailable">Mất kết nối mạng</string>
+    <string name="message_network_is_unavailable">Network not available.</string>
     <string name="generic_error">Error!</string>
     <string name="residence">Residence</string>
     <string name="title_activity_login">LoginActivity</string>
@@ -70,4 +85,11 @@
     <string name="repassword">Confirm Password</string>
     <string name="signup_google">Signup with google</string>
     <string name="login">login</string>
+    <string name="SAVED">saved</string>
+    <string name="saved">SAVED</string>
+    <string name="space">Space</string>
+    <string name="service">Service</string>
+    <string name="quality">Quality</string>
+    <string name="like">like</string>
+    <string name="title_activity_address_in_map">Address</string>
 </resources>

@@ -61,6 +61,7 @@ public class ListAddressFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(getActivity(), ActivityAddress.class);
                 i.putExtra("id_address",mData.get(position).getId());
+                i.putExtra("distance", mData.get(position).getDistance());
                 getActivity().startActivity(i);
             }
         });

@@ -27,6 +27,7 @@ import bk.vinhdo.taxiads.TaxiApplication;
 import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.listeners.AlertListener;
 import bk.vinhdo.taxiads.models.UserModel;
+import bk.vinhdo.taxiads.social.FacebookManager;
 import bk.vinhdo.taxiads.utils.view.CustomTextView;
 import bk.vinhdo.taxiads.utils.view.SAutoBgImageButton;
 
@@ -53,7 +54,7 @@ public abstract class BaseActivity extends FragmentActivity {
     public RelativeLayout mRightBarLayout;
     public ImageView mTitleImage;
     public LinearLayout layout_actionbar;
-
+    public FacebookManager mFacebookManager;
     protected UserModel mCurrentUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,7 @@ public abstract class BaseActivity extends FragmentActivity {
         mInflater = LayoutInflater.from(getApplicationContext());
 
         mHandler = new Handler();
-
+        mFacebookManager = FacebookManager.getInstance(BaseActivity.this);
         super.setContentView(R.layout.layout_base);
         rootLayout = (RelativeLayout) findViewById(R.id.root_layout);
         initModels(savedInstanceState);

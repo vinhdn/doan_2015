@@ -9,11 +9,11 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-c935d449dd4e2b3a886d0a95e27c84b13417c566.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.2.3/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="151dcc4be9b748290223c6bbf94bf8213181a971">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-e6ce81bb5dad0ad9fa7ae2e4838eb05a550225d3.jar" />
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-2fc67ccd18b9a2aee863c57aadf45cdaf6526b36.jar" />
     </item>
     <item
         jar="/Users/vinhdo/Code/quanhdayDoan/run/libs/volley.jar"
@@ -23,20 +23,6 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/volley-4aad97297336425d82b812d2c241b9c3d70c5452.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-08197d339089bb88e8a939cd42118f80e7f5c3d2.jar" />
-    </item>
-    <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-078d01f54a044f6e38647985d5dceff89a523252.jar" />
-    </item>
-    <item
         jar="/Users/vinhdo/Code/quanhdayDoan/run/libs/universal-image-loader-1.9.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -44,18 +30,18 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-d7bfa80dd8db2b9f3d40385f852ce26415905c4b.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/libs/picasso-2.4.0.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/picasso-2.4.0-430cdbcb7aeca913239edc6c566be5413ea9feaf.jar" />
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-23483a6653bbd134db4f663db7ba3d1bf4f5108d.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.2.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/gson-2.2.4-e1adfe0e2553d1668fa7fea7bfa64545eb872c64.jar" />
+        sha1="5bba805ab6e6eed90593bb115e78880d7accafed">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-92639cf2e9f486cf8549e0786045620d59d48e30.jar" />
     </item>
     <item
         jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/6.1.0/63735f48b82bcd24cdd33821342428252eb1ca5a/butterknife-6.1.0.jar"
@@ -79,25 +65,39 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-38a060359f48ef4d9a9f980136809393eae6c9ad.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-4db960cce27a735cf9d17c8d3e7c9fd134141a5c.jar" />
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-83c92c81ee14e8d81ac7d5a276de5198701d03d0.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-5f8bd44b0d9ac65c0284e65238246eb217666680.jar" />
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-bfe1b799fc0422ac7fe8621d958fb25cd8016a4f.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.squareup/otto/1.3.5/7941cd2c2c8ec006800d75c35f8a9dacf892ab93/otto-1.3.5.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="7941cd2c2c8ec006800d75c35f8a9dacf892ab93">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/otto-1.3.5-5e38368ea755519e67d8548eff5c5e22b4ee2f8f.jar" />
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-560c66ea648c7500cda384e1dc5d3d88f3006c03.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-ae03ca0553ba44a5ed5a769c724cd98cf87063a6.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-788f941ae17d15b3e4ecd663cd93c35c5bd1a127.jar" />
     </item>
     <item
         jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-android/4.48/afa06f539a4026c10b247386312aa67404b80a16/ormlite-android-4.48.jar"
@@ -107,25 +107,11 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/ormlite-android-4.48-368bbb7450c601f53e8846c6891a3648cec998e8.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/it.sephiroth.android.library.horizontallistview/hlistview/1.2.2/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.2.4/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="698658e3af1e3f2a5b199e0d09ee6c57793405bd">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-60fcdab2c9bfe17562ebb5cda835f2a19af037fd.jar" />
-    </item>
-    <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/pre-dexed/debug/classes-7f32287998ef825a5a6f37b09cd83965aef09895.jar" />
-    </item>
-    <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/quanhdayDoan/MaterialNavigationDrawerModule/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ff0491a50d118dcc7164969691805943e29627e1">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-bf18c3fbec16f6126cd95014644e334c6c649ebd.jar" />
+        sha1="d0d81ee0db83fd6c59100ee80c6c2b051b6a9cee">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-29c5d6dd5176ad3baceefd63ad6b5be18a80421f.jar" />
     </item>
     <item
         jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/4.48/e579bd2905d0399af5029aaaf9817d5fa0ca88a5/ormlite-core-4.48.jar"
@@ -135,11 +121,144 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/ormlite-core-4.48-cd73c0aca6a73f9adb35eb0980104dd4e63c32ef.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/pre-dexed/debug/classes-2b1d7ec2ef3c498fa888248aaf080932602fcb57.jar" />
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-719f17fb1e45e05e93e1202fbd322fbb8733d7bb.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/quanhdayDoan/library/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cabb87693ed94d1d5a86f47072c22380d22d528b">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-b478c6b243bd343a654ae56f4860b29bd762d33a.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-4fc739fbd7b3d5c042c5f4b4f2ea594e7cfec901.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-7f13ca8aeb79e92a0ba0f0b9c49f89aa0bbfe518.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-c88c698aa6122ccb0df5884d28350367258f3ce4.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-afc50030a42f6df70e106002a80286ecd0eddf95.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-03eeb26f4c9eb21b02f91f7b0c840e375eda2f0d.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/libs/picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/picasso-2.4.0-430cdbcb7aeca913239edc6c566be5413ea9feaf.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/gson-2.2.4-e1adfe0e2553d1668fa7fea7bfa64545eb872c64.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-b098d90d7b17faf9791a60a76ff00660389fff67.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-b13da9e021427ee99abff277b95067e56f46b712.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-52a436785b6bdea6493aee23c959e79fd87aab15.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="62753ea30b9fd44e248c50952a36c4b6a4b3eb73">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-87cfa8ba89d787afdd3dd2491bdcf80bb2a2fd83.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.squareup/otto/1.3.5/7941cd2c2c8ec006800d75c35f8a9dacf892ab93/otto-1.3.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7941cd2c2c8ec006800d75c35f8a9dacf892ab93">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/otto-1.3.5-5e38368ea755519e67d8548eff5c5e22b4ee2f8f.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-498bc4bbdd58c9874c70f0631096755b0feb8369.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-dd21ac7cfb887d7d047d1120903dfe09e3c89146.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-f69ef8afc04e496af7763a41a039756275e2259d.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/it.sephiroth.android.library.horizontallistview/hlistview/1.2.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="698658e3af1e3f2a5b199e0d09ee6c57793405bd">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-60fcdab2c9bfe17562ebb5cda835f2a19af037fd.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-340364ca7e6f627db28c919f9dc081b785f0a05d.jar" />
+    </item>
+    <item
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/quanhdayDoan/MaterialNavigationDrawerModule/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3371a611483842a806e96616a484e417503e0e64">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-bf18c3fbec16f6126cd95014644e334c6c649ebd.jar" />
     </item>
     <item
         jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/classes.jar"
@@ -149,46 +268,32 @@
         <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-2cd0f8a749d3a6296856606db7e869f545e59b07.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/getaddress/build/intermediates/pre-dexed/debug/classes-cad35947dbaec6038452ed6e2f6eb4a78910b73d.jar" />
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-35a9a6adeea914ee91cfd306a155b466545f8dda.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-fb04bb021521075de57be40f46f6fc5085fc706f.jar" />
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-3cb755afb44d2d72d70f170171866e6890a34f85.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.0/classes.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="7372378dec00f25c04714a058617e515858273c8">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-c7686b5bdff5b0c59ba92d3247567f77dbaa9a4a.jar" />
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-1a6e7a304edd33da79efa92dcb612e2b34bd8999.jar" />
     </item>
     <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.1.1/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-4e8154ec02c9fd2221e6279a1f0dd230a6d429d7.jar" />
-    </item>
-    <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.1.2/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="158555fbeff80e5a85464a818eadda8a448a1051">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-22c61b651e9828e1c435e6fe8d4c1f3c5f5734ce.jar" />
-    </item>
-    <item
-        jar="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/exploded-aar/quanhdayDoan/library/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="561c9ee0041dbd5e709a03adbd655a0332d93372">
-        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-b478c6b243bd343a654ae56f4860b29bd762d33a.jar" />
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="/Users/vinhdo/Code/quanhdayDoan/run/build/intermediates/pre-dexed/debug/classes-79839c0789d7f53704d8f055e470eceb19dfe7ee.jar" />
     </item>
     <item
         jar="/Users/vinhdo/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"

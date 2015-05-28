@@ -74,7 +74,7 @@ public class BaseModel implements Serializable {
             } else if (this instanceof AddressModel) {
                 AddressModel address = (AddressModel) this;
                 databaseHelper.getAddressDao().createOrUpdate(address);
-                if(address.getListTimeOpen() != null && address.getListPosts().size() > 0){
+                if(address.getListTimeOpen() != null && address.getListTimeOpen().size() > 0){
                     for(TimeOpenModel timeOpen : address.getListTimeOpen()){
                         timeOpen.setAddressId(address.getId());
                         timeOpen.create();

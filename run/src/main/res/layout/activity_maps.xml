@@ -7,6 +7,7 @@
 
     <fragment
         android:id="@+id/map"
+        android:layout_below="@+id/search_ll"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -30,49 +31,45 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:background="@android:color/transparent"
-        android:layout_margin="5dp"
+        android:background="@color/hong"
         android:visibility="visible"
         android:id="@+id/search_ll"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/search_l"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:visibility="visible"
             >
-
-            <bk.vinhdo.taxiads.utils.view.SAutoBgButton
-                android:id="@+id/close_search_btn"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/ic_error_x"
-                />
 
             <EditText
                 android:id="@+id/search_edt"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="6dp"
+                android:layout_margin="5dp"
                 android:singleLine="true"
                 android:hint="Enter search here..."
                 android:textColor="@color/gray_text"
                 android:textColorHint="@color/gray_text"
-                android:background="@color/gray_background"
+                android:background="@color/white"
                 />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/bg_rate_gray"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
             >
             <bk.vinhdo.taxiads.utils.view.SAutoBgButton
                 android:id="@+id/search_btn"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/abc_ic_search_api_mtrl_alpha"
                 />
         </LinearLayout>
@@ -84,6 +81,7 @@
         android:id="@+id/list_result_framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/search_ll"
         android:background="@android:color/transparent"
         android:visibility="gone" />
 </RelativeLayout>

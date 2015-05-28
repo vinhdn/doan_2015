@@ -172,7 +172,7 @@ public class CheckinActivity extends BaseActivity{
                     ToastUtil.show("created");
                     Intent intent = new Intent();
                     PostModel post = JSONConvert.getPost(response.getData());
-                    intent.putExtra("post", post);
+                    intent.putExtra("post", response.getData());
                     setResult(RESULT_OK, intent);
                     finish();
                 } else {

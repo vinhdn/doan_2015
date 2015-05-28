@@ -68,4 +68,7 @@ public class Key {
     public static final String ACTION_LOGIN = "ACTION_LOGIN";
     public static final String KEY_SEARCH = "search";
     public static final String KEY_CREATE_POST = "CREATE_POST";
+    public static final String EXTRA_NAME = "name";
+    public static final String EXTRA_LAT = "lat";
+    public static final String EXTRA_LNG = "lng";
 }

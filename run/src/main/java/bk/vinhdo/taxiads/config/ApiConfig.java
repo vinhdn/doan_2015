@@ -89,4 +89,5 @@ public class ApiConfig {
     public static final String PARAM_PHOTO = "photo";
     public static final String PARAM_DIST = "dist";
     public static final String PARAM_ACTION = "action";
+    public static final String URL_GET_LIST_SAVED = URL_BASE + "user/getlistsaved";
 }

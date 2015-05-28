@@ -44,21 +44,40 @@ public class ItemAddressFragment extends Fragment {
             public void onClick(View v) {
                 Intent i = new Intent(mActivity, ActivityAddress.class);
                 i.putExtra("id_address",address.getId());
+                i.putExtra("distance", address.getDistance());
                 mActivity.startActivity(i);
             }
         });
         if(address == null)
             return  view;
         TextView title = (TextView)view.findViewById(R.id.info_maps_title);
-        TextView tvRate = (TextView)view.findViewById(R.id.info_maps_rate);
+        TextView mRateTv = (TextView)view.findViewById(R.id.info_maps_rate);
         TextView tvContent = (TextView)view.findViewById(R.id.info_maps_content);
         TextView tvDistance = (TextView)view.findViewById(R.id.distance_tv);
         title.setText(address.getName());
-        if(address.getRate() > 0){
-            tvRate.setText(String.format("%.1f", address.getRate()));
+        float rate = address.getRate();
+        if (rate < 5) {
+            mRateTv.setText("---");
+            mRateTv.setBackgroundResource(R.drawable.bg_rate_gray);
+        } else if (rate < 6.5) {
+            mRateTv.setText(String.format("%.1f", rate));
+            mRateTv.setBackgroundResource(R.drawable.bg_rate_orange);
+        } else if (rate < 8) {
+            mRateTv.setText(String.format("%.1f", rate));
+            mRateTv.setBackgroundResource(R.drawable.bg_rate_yellow);
+        } else {
+            mRateTv.setText(String.format("%.1f", rate));
+            mRateTv.setBackgroundResource(R.drawable.bg_rate_green);
         }
         tvContent.setText(address.getCategory().getName());
-        tvDistance.setText(String.format("%.1f",((float)address.getDistance() / 1000f)));
+        if (address.getAddress() != null) {
+            tvContent.setText(address.getAddress());
+        } else if (address.getStreetNumber() != null) {
+            tvContent.setText(address.getStreetNumber());
+        }else {
+            tvContent.setText("");
+        }
+        tvDistance.setText(String.format("%.1f km",((float)address.getDistance() / 1000f)));
         return view;
     }
 }

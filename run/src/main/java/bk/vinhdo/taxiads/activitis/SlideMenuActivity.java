@@ -20,6 +20,7 @@ import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.fragments.FragmentIndex;
 import bk.vinhdo.taxiads.fragments.MainFragment;
 import bk.vinhdo.taxiads.fragments.RegisterFragment;
+import bk.vinhdo.taxiads.fragments.SavedAddressFragment;
 import bk.vinhdo.taxiads.fragments.SettingFragment;
 import bk.vinhdo.taxiads.models.UserModel;
 import bk.vinhdo.taxiads.utils.view.CircleImage;
@@ -41,7 +42,7 @@ public class SlideMenuActivity extends MaterialNavigationDrawer implements View.
         // create sections
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        this.addSection(newSection(getString(R.string.home_menu), new MainFragment()));
+        this.addSection(newSection(getString(R.string.home_menu),R.drawable.ic_map, new MainFragment()));
 
         this.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -73,8 +74,8 @@ public class SlideMenuActivity extends MaterialNavigationDrawer implements View.
             setupSignUp();
         }else{
             View view = LayoutInflater.from(this).inflate(R.layout.layout_menu_header_info, null, false);
-            this.addSection(newSection(getString(R.string.setting_menu), new SettingFragment()));
-            this.addSection(newSection(getString(R.string.activity_menu), new FragmentIndex("Menu")));
+            this.addSection(newSection(getString(R.string.setting_menu),R.drawable.ic_setting ,new SettingFragment()));
+            this.addSection(newSection(getString(R.string.saved),R.drawable.actionbar_save_pressed, new SavedAddressFragment()));
             setDrawerHeaderCustom(view);
             changeHeightCustomHeader(12 / 16);
             setActionButtomMenu(R.layout.layout_action_menu);

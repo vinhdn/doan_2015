@@ -61,6 +61,7 @@ import bk.vinhdo.taxiads.fragments.ListAddressFragment;
 import bk.vinhdo.taxiads.models.Address;
 import bk.vinhdo.taxiads.models.AddressModel;
 import bk.vinhdo.taxiads.models.ResponseModel;
+import bk.vinhdo.taxiads.utils.view.SAutoBgButton;
 import bk.vinhdo.taxiads.volley.VolleySingleton;
 
 public class MapsActivity extends BaseActivity implements
@@ -94,8 +95,10 @@ public class MapsActivity extends BaseActivity implements
     EditText mSearchEdt;
     FrameLayout mListResultFrame;
     ListAddressFragment mListAddressFragment = new ListAddressFragment();
-
-    boolean isShowSearch;
+    SAutoBgButton mCloseSearchBtn;
+    boolean isShowSearch = true;
+    String mTitle = "Around here";
+    LatLng mLongClickLocation;
 
     /**
      * The desired interval for location updates. Inexact. Updates may be more or less frequent.
@@ -160,20 +163,27 @@ public class MapsActivity extends BaseActivity implements
             Log.d("ACTION", action);
             if (action.equals(Key.KEY_NEARBY)) {
                 mCategoryId = null;
+                mTitle = "Around here";
             } else if (action.equals(Key.KEY_CAFE)) {
                 mCategoryId = Key.KEY_CATE_ID_CAFE;
+                mTitle = "Cafe";
             } else if (action.equals(Key.KEY_SHOP)) {
                 mCategoryId = Key.KEY_CATE_ID_SHOP_AND_SERVICE;
+                mTitle = "Shop";
             } else if (action.equals(Key.KEY_RESIDENCE)) {
                 mCategoryId = Key.KEY_CATE_ID_RESIDENCE;
+                mTitle = "Residence";
             } else if (action.equals(Key.KEY_RESTAURANT)) {
                 mCategoryId = Key.KEY_CATE_ID_RESTAURANT;
+                mTitle = "Restaurant";
             } else if (action.equals(Key.KEY_HEATH)) {
-
+                mTitle = "Heath";
             }else if(action.equals(Key.KEY_SEARCH)){
                 mCategoryId = null;
+                mTitle = "Search";
             }else if(action.equals(Key.KEY_CREATE_POST)){
                 mCategoryId = null;
+                mTitle = "Select Address to Post";
             }
         }
         setContentView(R.layout.activity_maps, false);
@@ -293,7 +303,7 @@ public class MapsActivity extends BaseActivity implements
         setVisibleLeftImage(true);
         setBackgroundLeftImage(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         setBackgroundRightImage(R.drawable.ic_lists);
-        setBackgroundTitleText("Maps", android.R.color.transparent);
+        setBackgroundTitleText(mTitle, android.R.color.transparent);
         lvAddress = (ViewPager) findViewById(R.id.lv_address_in_maps);
         listAddress = new ArrayList<>();
         adapter = new ItemAddressListViewAdapter(getSupportFragmentManager(), this, listAddress);
@@ -327,10 +337,6 @@ public class MapsActivity extends BaseActivity implements
         mSearchEdt = (EditText) findViewById(R.id.search_edt);
         findViewById(R.id.search_btn).setOnClickListener(this);
         mListResultFrame = (FrameLayout) findViewById(R.id.list_result_framelayout);
-        if(mAction.equals(Key.KEY_SEARCH) || mAction.equals(Key.KEY_CREATE_POST)){
-            mSearchLl.setVisibility(View.VISIBLE);
-            isShowSearch = true;
-        }
     }
 
     @Override
@@ -347,8 +353,10 @@ public class MapsActivity extends BaseActivity implements
     public void onRightHeaderClick() {
         if(mListResultFrame.getVisibility() == View.GONE) {
             showAddressInList(listAddress, true);
+            setBackgroundRightImage(R.drawable.map_ic_white);
         }else{
             showAddressInList(null, false);
+            setBackgroundRightImage(R.drawable.ic_lists);
         }
     }
 
@@ -390,9 +398,9 @@ public class MapsActivity extends BaseActivity implements
         // connection to GoogleApiClient intact.  Here, we resume receiving
         // location updates if the user has requested them.
 
-        if (mGoogleApiClient.isConnected() && mRequestingLocationUpdates) {
-            startLocationUpdates();
-        }
+//        if (mGoogleApiClient.isConnected() && mRequestingLocationUpdates) {
+//            startLocationUpdates();
+//        }
     }
 
     @Override
@@ -469,10 +477,10 @@ public class MapsActivity extends BaseActivity implements
         }else {
             imageRe = R.drawable.pin_nearby;
         }
-        if (listAddressMarker.get(p) != null) {
-            listAddressMarker.get(p).remove();
-            listAddressMarker.remove(p);
-        }
+//        if (listAddressMarker.get(p) != null) {
+//            listAddressMarker.get(p).remove();
+//            listAddressMarker.remove(p);
+//        }
         Marker marker = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(add.getLat(), add.getLng()))
                 .snippet(add.toJSON())
@@ -501,6 +509,11 @@ public class MapsActivity extends BaseActivity implements
                         listAddress.clear();
                         listAddress.addAll(listAddrs);
                         mListAddressFragment.setDataAddress(listAddress);
+                        listAddressMarker.clear();
+                        mMap.clear();
+                        if(mLongClickLocation != null){
+                            mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.map_pin_large_selected)).position(mLongClickLocation));
+                        }
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -607,7 +620,9 @@ public class MapsActivity extends BaseActivity implements
     @Override
     public void onMapLongClick(LatLng latLng) {
         if (isChangePosition) {
+            mLongClickLocation = latLng;
             getAddress(latLng.latitude, latLng.longitude, null);
+            mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.map_pin_large_selected)).position(latLng));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13f));
         }
     }
@@ -622,10 +637,6 @@ public class MapsActivity extends BaseActivity implements
                     isShowSearch = true;
                     mSearchLl.setVisibility(View.VISIBLE);
                 }
-                break;
-            case R.id.close_search_btn:
-                isShowSearch = false;
-                mSearchLl.setVisibility(View.GONE);
                 break;
         }
     }
@@ -656,6 +667,7 @@ public class MapsActivity extends BaseActivity implements
         // is displayed as the activity is re-created.
         //if (mCurrentLocation == null) {
         mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if(listAddress != null && listAddress.size() > 0) return;
         mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
         if (mCurrentLocation != null && mMap != null) {
             Log.d("Current Location", mCurrentLocation.getLatitude() + "  " + mCurrentLocation.getLongitude());

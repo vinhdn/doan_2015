@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bk.vinhdo.taxiads">
+    package="bk.vinhdo.taxiads" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -18,7 +18,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -29,26 +29,18 @@
         <activity
             android:name=".activitis.MapsActivity"
             android:label="@string/title_activity_maps"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".activitis.AddressActivity"
-            android:label="BK Address"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activitis.MapsActivity" />
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activitis.CheckinActivity"
             android:label="@string/title_activity_checkin"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activitis.AddressActivity" />
+                android:value=".activitis.ActivityAddress" />
         </activity>
         <activity
             android:name=".utils.getimage.CustomGalleryActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="luminous.ACTION_PICK" />
                 <action android:name="luminous.ACTION_MULTIPLE_PICK" />
@@ -58,12 +50,12 @@
         </activity>
         <activity
             android:name=".activitis.MainActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_main" />
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activitis.SlideMenuActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MyNavigationDrawerTheme">
+            android:theme="@style/MyNavigationDrawerTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -74,23 +66,38 @@
         <meta-data
             android:name="com.crashlytics.ApiKey"
             android:value="a26f5b43b9afc32015096346340d61221ee7337d" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider597533300380476"
+            android:exported="true" />
+
+        <service android:name=".service.AppIntentService" />
 
         <activity
             android:name=".activitis.ActivityAddress"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_activity_address"></activity>
+            android:label="@string/title_activity_activity_address"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activitis.ActivityTest"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_activity_test"></activity>
+            android:label="@string/title_activity_activity_test"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activitis.LoginActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ce2eea98f0e0aebc5b2973e3041d489734447a8e" />
+
+        <activity
+            android:name=".activitis.AddressInMapActivity"
+            android:label="@string/title_activity_address_in_map" >
+        </activity>
     </application>
 
 </manifest>

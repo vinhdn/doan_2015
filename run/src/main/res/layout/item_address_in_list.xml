@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:background="@android:color/transparent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
     android:orientation="horizontal">
 
     <ImageView
@@ -17,11 +19,20 @@
         android:focusable="false"
         android:focusableInTouchMode="false" />
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_top_text"
+        android:visibility="visible" />
+
     <LinearLayout
+        android:id="@+id/info_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:padding="10dp"
+        android:gravity="bottom"
         android:orientation="horizontal">
 
         <bk.vinhdo.taxiads.utils.view.CustomTextView
@@ -56,18 +67,33 @@
                 android:id="@+id/cate_address_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse"
                 android:textColor="#ffbfc0c6"
                 android:singleLine="true"
-                android:text="shop cafe, restauran"
-                android:textStyle="italic" />
+                android:text="shop cafe, restauran"/>
         </LinearLayout>
 
         <bk.vinhdo.taxiads.utils.view.CustomTextView
             android:id="@+id/distance_tv"
             android:textColor="@color/hong"
             android:textSize="@dimen/text_size_normal"
+            android:text="8km"
+            android:background="@drawable/shape_grey_radius"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <bk.vinhdo.taxiads.utils.view.CustomTextView
+        android:id="@+id/delete_btn"
+        android:visibility="gone"
+        android:layout_below="@+id/info_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:layout_marginLeft="10dp"
+        android:padding="7dp"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/ic_error_x"
+        android:drawablePadding="5dp"
+        android:background="@drawable/bg_rate_gray"
+        />
 </RelativeLayout>

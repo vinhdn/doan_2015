@@ -113,4 +113,11 @@ public class RestClient {
         }
         LoopjRestClient.post(ApiConfig.URL_REGISTER, localRequestParams, paramTextHttpResponseHandler);
     }
+
+    public static void getListSaved(String accessToken, TextHttpResponseHandler responseHandler){
+        RequestParams params = new RequestParams();
+        params.put(ApiConfig.PARAM_ACCESS_TOKEN, accessToken);
+
+        LoopjRestClient.post(ApiConfig.URL_GET_LIST_SAVED, params, responseHandler);
+    }
 }

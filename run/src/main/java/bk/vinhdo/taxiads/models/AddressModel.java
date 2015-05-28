@@ -108,7 +108,7 @@ public class AddressModel extends BaseModel{
     @DatabaseField
     private boolean isOwner;
 
-    @SerializedName("likes")
+//    @SerializedName("likes")
     private List<UserModel> listLikes;
 
     @SerializedName("best_photo")
@@ -122,6 +122,7 @@ public class AddressModel extends BaseModel{
     private int idInList = -1;
 
     @SerializedName("distance")
+    @DatabaseField
     private int distance;
 
     public long getDateUpdate() {

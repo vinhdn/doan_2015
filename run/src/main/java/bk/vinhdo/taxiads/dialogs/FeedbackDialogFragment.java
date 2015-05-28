@@ -15,6 +15,7 @@ import org.apache.http.Header;
 import bk.vinhdo.taxiads.R;
 import bk.vinhdo.taxiads.config.Key;
 import bk.vinhdo.taxiads.listeners.FeedbackFragmentListener;
+import bk.vinhdo.taxiads.utils.ToastUtil;
 import bk.vinhdo.taxiads.utils.view.CustomEditText;
 import bk.vinhdo.taxiads.utils.view.CustomTextView;
 import bk.vinhdo.taxiads.utils.view.FeedbackItem;
@@ -38,8 +39,6 @@ public class FeedbackDialogFragment extends DialogFragment {
     FeedbackItem mPunctualityItem;
     @InjectView(R.id.cleanliness_item)
     FeedbackItem mCleanlinessItem;
-    @InjectView(R.id.safeness_item)
-    FeedbackItem mSafenessItem;
 
     @InjectView(R.id.fb_comment_edt)
     CustomEditText mCommentEdt;
@@ -93,11 +92,10 @@ public class FeedbackDialogFragment extends DialogFragment {
             mTitleTv.setText(mTitle);
         }
         //TODO set String for rate
-//        mRecommendedItem.setTitle(getString(R.string.recommended));
-//        mPunctualityItem.setTitle(getString(R.string.punctuality));
-//        mFriendlinessItem.setTitle(getString(R.string.friendliness));
-//        mCleanlinessItem.setTitle(getString(R.string.cleanliness));
-//        mSafenessItem.setTitle(getString(R.string.safeness));
+        mRecommendedItem.setTitle(getString(R.string.space));
+        mPunctualityItem.setTitle(getString(R.string.service));
+        mFriendlinessItem.setTitle(getString(R.string.quality));
+        mCleanlinessItem.setTitle(getString(R.string.like));
         builder.setView(view);
         return builder.create();
     }
@@ -118,6 +116,8 @@ public class FeedbackDialogFragment extends DialogFragment {
     public void submit() {
 
         if (!isValidate()) return;
+            ToastUtil.show("Thanks for rate.");
+        dismiss();
     }
 
     private boolean isValidate() {
@@ -127,7 +127,6 @@ public class FeedbackDialogFragment extends DialogFragment {
         f = mFriendlinessItem.getFeedbackSelected();
         p = mPunctualityItem.getFeedbackSelected();
         c = mCleanlinessItem.getFeedbackSelected();
-        s = mSafenessItem.getFeedbackSelected();
         mComment = mCommentEdt.getText().toString().trim();
 
         mCommentEdt.setError(null);

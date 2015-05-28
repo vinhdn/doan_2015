@@ -50,12 +50,13 @@ public class ActivityAddress extends BaseActivity {
     private RelativeLayout mRequestProgress;
     private FrameLayout mContainer;
     private AddressListViewFragment mFragment;
-
+    int mDistance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAddress = new AddressModel();
         mAddress.setId(getIntent().getExtras().getString("id_address"));
+        mDistance = getIntent().getExtras().getInt("distance");
         setContentView(R.layout.address_activity, false);
     }
 
@@ -86,6 +87,7 @@ public class ActivityAddress extends BaseActivity {
                 ResponseModel response = JSONConvert.getResponse(responseString);
                 if (response.isSuccess()) {
                     mAddress = JSONConvert.getAddress(response.getData());
+                    mAddress.setDistance(mDistance);
                     setBackgroundTitleText(mAddress.getName(),android.R.color.transparent);
                     mFragment = new AddressListViewFragment(mAddress);
                     getSupportFragmentManager().beginTransaction()
@@ -144,7 +146,7 @@ public class ActivityAddress extends BaseActivity {
             case Key.REQUEST_CODE_CHECKIN:
                 if(resultCode == Activity.RESULT_OK){
                     if(data == null) return;
-                    PostModel post = data.getParcelableExtra("post");
+                    PostModel post = JSONConvert.getPost(data.getStringExtra("post"));
                     if(mFragment != null && post != null){
                         mFragment.addNewPost(post);
                     }
